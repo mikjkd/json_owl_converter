@@ -61,7 +61,6 @@ if __name__ == "__main__":
                     if p == 'Ref':
                         setattr(new_ind, 'Ref', [i['ref']])
                     else:
-                        print(p)
                         try:
                             str_p = i['properties'][pos]
                             string_encode = str_p.encode("ascii", "ignore")
