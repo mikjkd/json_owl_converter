@@ -1,0 +1,81 @@
+[
+    {
+        "CSOntology.ServiceCategory": [
+            {
+                "CSOntology.AI": []
+            },
+            {
+                "CSOntology.Business": []
+            },
+            {
+                "CSOntology.Compute": [
+                    {
+                        "CSOntology.WorkloadDistribution": []
+                    }
+                ]
+            },
+            {
+                "CSOntology.InformationManagement": [
+                    {
+                        "CSOntology.Database": [
+                            {
+                                "CSOntology.NoSQL": [
+                                    {
+                                        "CSOntology.KeyValue": []
+                                    }
+                                ]
+                            },
+                            {
+                                "CSOntology.Massive": []
+                            }
+                        ]
+                    },
+                    {
+                        "CSOntology.FileStorage": []
+                    },
+                    {
+                        "CSOntology.ManipulationAndAnalysis": []
+                    }
+                ]
+            },
+            {
+                "CSOntology.Development": [
+                    {
+                        "CSOntology.SoftwareInteroperability": []
+                    }
+                ]
+            },
+            {
+                "CSOntology.Educational": []
+            },
+            {
+                "CSOntology.HealthCare": []
+            },
+            {
+                "CSOntology.Management": []
+            },
+            {
+                "CSOntology.SystemManagement": [
+                    {
+                        "CSOntology.Monitoring": []
+                    }
+                ]
+            },
+            {
+                "CSOntology.MultimediaProduction": []
+            },
+            {
+                "CSOntology.Networking": []
+            },
+            {
+                "CSOntology.OfficeSystem": []
+            },
+            {
+                "CSOntology.OperatingSystem": []
+            },
+            {
+                "CSOntology.WEB": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,1521 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://127.0.0.1/ontologies/CSOntology.owl#"
+     xml:base="http://127.0.0.1/ontologies/CSOntology.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:Process="http://127.0.0.1/localImports/Process.owl#"
+     xmlns:Profile="http://127.0.0.1/localImports/Profile.owl#"
+     xmlns:Service="http://127.0.0.1/localImports/Service.owl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:ObjectList="http://127.0.0.1/localImports/ObjectList.owl#"
+     xmlns:ExtendedWop="http://127.0.0.1/ontologies/ExtendedWop.owl#">
+    <owl:Ontology rdf:about="http://127.0.0.1/ontologies/CSOntology.owl">
+        <owl:versionIRI rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#aKindOf -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#aKindOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+                    <rdf:Description rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasEquivalenceInRole -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasEquivalenceInRole">
+        <owl:inverseOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#isEquivalentInRole"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasImage -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasImage">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ImageType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasInputParameters -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasInputParameters"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasMethod"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasOutputParameters -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasOutputParameters"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasVendor -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasVendor">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#hasVirtualizer -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#hasVirtualizer">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isEquivalentInRole -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isEquivalentInRole">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isMethodCompositionEquivalentTo -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isMethodCompositionEquivalentTo"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isMethodEquivalent -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isMethodEquivalent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isModel -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isModel">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ModelCloudService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isParameterEquivalent -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isParameterEquivalent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isPartMethodCompositionOf -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isPartMethodCompositionOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#isServiceEquivalent -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#isServiceEquivalent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#offeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#offeredBy">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#offeringProvider -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#offeringProvider">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#patternOfferedBy -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#patternOfferedBy">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/ExtendedWop.owl#VendorCloudPattern"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#support -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#support">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#API"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ExtendedWop.owl#composedBy -->
+
+    <owl:ObjectProperty rdf:about="http://127.0.0.1/ontologies/ExtendedWop.owl#composedBy">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/ExtendedWop.owl#VendorCloudPattern"/>
+        <rdfs:range rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#architecture -->
+
+    <owl:DatatypeProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#architecture">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#cpuCores -->
+
+    <owl:DatatypeProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#cpuCores">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#cpuSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#cpuSpeed">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#memory -->
+
+    <owl:DatatypeProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#memory">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GB</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#size -->
+
+    <owl:DatatypeProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#size">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GB</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#version -->
+
+    <owl:DatatypeProperty rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#version">
+        <rdfs:domain rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#AmazonService -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/Amazon.owl#AmazonService"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#AI -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#AI">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#API -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#API"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Business -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Business">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#CloudService -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Company -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Company"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Compute -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Compute">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Database -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Database">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Development -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Development">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Educational -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Educational">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#FileStorage -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#FileStorage">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#HealthCare -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#HealthCare">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#ImageType -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#ImageType"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#InformationManagement -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#InformationManagement">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#KeyValue -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#KeyValue">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#NoSQL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Management -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Management">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#ManipulationAndAnalysis -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#ManipulationAndAnalysis">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Massive -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Massive">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#ModelCloudService -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#ModelCloudService"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Monitoring -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Monitoring">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#SystemManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#MultimediaProduction -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#MultimediaProduction">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Networking -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Networking">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#NoSQL -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#NoSQL">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#OfficeSystem -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#OfficeSystem">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#OperatingSystem -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#SoftwareInteroperability -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#SoftwareInteroperability">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Development"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#SystemManagement -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#SystemManagement">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#VirtualAppliance"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#WEB -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#WEB">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ServiceCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#WorkloadDistribution -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#WorkloadDistribution">
+        <rdfs:subClassOf rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Compute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ExtendedWop.owl#VendorCloudPattern -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/ExtendedWop.owl#VendorCloudPattern"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzureService -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzureService"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenstackService -->
+
+    <owl:Class rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenstackService"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://127.0.0.1/CloudPatterns/AmazonPatterns.owl#ScaleOutPatternAWS_SERVICE -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/CloudPatterns/AmazonPatterns.owl#ScaleOutPatternAWS_SERVICE"/>
+    
+
+
+    <!-- http://127.0.0.1/CloudPatterns/MicrosoftAzurePatterns.owl#PipesAndFilterAzure_SERVICE -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/CloudPatterns/MicrosoftAzurePatterns.owl#PipesAndFilterAzure_SERVICE"/>
+    
+
+
+    <!-- http://127.0.0.1/CloudPatterns/MicrosoftAzurePatterns.owl#ScaleOutPatternAzure_SERVICE -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/CloudPatterns/MicrosoftAzurePatterns.owl#ScaleOutPatternAzure_SERVICE"/>
+    
+
+
+    <!-- http://127.0.0.1/CloudPatterns/OpenStackPatterns.owl#PipesAndFilterOpenStack_SERVICE -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/CloudPatterns/OpenStackPatterns.owl#PipesAndFilterOpenStack_SERVICE"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon_AutoScaling -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon_AutoScaling">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon_CloudWatch -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon_CloudWatch">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon_ElasticComputeCloud -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon_ElasticComputeCloud">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon_ElasticLoadBalancing -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon_ElasticLoadBalancing">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon_SimpleQueueService -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon_SimpleQueueService">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#Amazon_SimpleStorageService -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#Amazon_SimpleStorageService">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#ConfigureHealthCheck -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#ConfigureHealthCheck"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#CreateAutoScalingGroup -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#CreateAutoScalingGroup"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#CreateLaunchConfiguration -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#CreateLaunchConfiguration"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancer -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancer"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancerListeners -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancerListeners"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancerPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancerPolicy"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#CreateQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#CreateQueue"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#DeleteMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#DeleteMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#EC2requestID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#EC2requestID"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#GroupName -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#GroupName"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#ImageID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#ImageID"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#InstanceID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#InstanceID"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#InstanceType -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#InstanceType"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#KeyName -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#KeyName"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#LaunchTime -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#LaunchTime"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#MaxCount -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#MaxCount"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#MinCount -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#MinCount"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#OwnerID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#OwnerID"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#PrivateDNSname -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#PrivateDNSname"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#PutMetricAlarm -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#PutMetricAlarm"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#PutMetricData -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#PutMetricData"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#PutScalingPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#PutScalingPolicy"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#ReceiveMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#ReceiveMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#RunInstance -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#RunInstance"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#SecurityGroup -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#SecurityGroup"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#SetLoadBalancerPoliciesOfListeners -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#SetLoadBalancerPoliciesOfListeners"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#StartInstance -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#StartInstance"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Amazon.owl#StopInstance -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Amazon.owl#StopInstance"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Agnostic -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#Amazon -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#Amazon"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#IaaS -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#IaaS">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ModelCloudService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#PaaS -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#PaaS">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ModelCloudService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/CSOntology.owl#SaaS -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/CSOntology.owl#SaaS">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#ModelCloudService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#AddRoleVM -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AddRoleVM"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureCreateQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureCreateQueue"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureDeleteQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureDeleteQueue"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureReadAndDeleteMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureReadAndDeleteMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureSendMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureSendMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_ComputeVirtualMachines -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_ComputeVirtualMachines">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#InstanceID"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_Monitor -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_Monitor">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_ServiceBus -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_ServiceBus">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_TrafficManager -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_TrafficManager">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateAutoscalingSettingResource -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateAutoscalingSettingResource"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateAvailabilitySet -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateAvailabilitySet"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateMetricAlert -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateMetricAlert"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateMetricData -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateMetricData"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateScaleGroup -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateScaleGroup"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateScaleTriggerRule -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateScaleTriggerRule"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateTrafficManagerProfile -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateTrafficManagerProfile">
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#DeleteAvailabilitySet -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#DeleteAvailabilitySet"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MicrosoftAzure">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#MonitorConfiguration -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MonitorConfiguration">
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#ConfigureHealthCheck"/>
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#SetLoadBalancerPoliciesOfListeners"/>
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorAssociate"/>
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorCreate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/MicrosoftAzure.owl#StartRoleVM -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/MicrosoftAzure.owl#StartRoleVM"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#AlarmThresholdCreate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#AlarmThresholdCreate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ApplyPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ApplyPolicy"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#CreateScalingGroup -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#CreateScalingGroup"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#CreateScalingPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#CreateScalingPolicy"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorAssociate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorAssociate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorCreate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorCreate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#LoadBalancerCreate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#LoadBalancerCreate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#NovaBoot -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#NovaBoot"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#NovaStart -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#NovaStart"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#NovaStop -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#NovaStop"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenStack -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenStack">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Ceilometer -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Ceilometer">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Heat -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Heat">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Neutron -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Neutron">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Nova -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Nova">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Zaqar -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Zaqar">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#PolicyCreate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#PolicyCreate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#SampleCreate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#SampleCreate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#StackCreate -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#StackCreate"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ZaqarCreateQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ZaqarCreateQueue"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ZaqarDeleteMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ZaqarDeleteMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ZaqarDeleteQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ZaqarDeleteQueue"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ZaqarGetMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ZaqarGetMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ZaqarPostMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ZaqarPostMessage"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/Openstack.owl#ZaqarPurgeQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/Openstack.owl#ZaqarPurgeQueue"/>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ComputeVirtualServers -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ComputeVirtualServers">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon_ElasticComputeCloud"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_ComputeVirtualMachines"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Nova"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ElasticQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ElasticQueue">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon_SimpleQueueService"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_ServiceBus"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Zaqar"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_NetworkLoadBalancing -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_NetworkLoadBalancing">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon_ElasticLoadBalancing"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_TrafficManager"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Neutron"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ResourceManagement -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ResourceManagement">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <hasEquivalenceInRole rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_Monitor"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon_AutoScaling"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Heat"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ResourceMonitoring -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ResourceMonitoring">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <hasEquivalenceInRole rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#Azure_Monitor"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#Amazon_CloudWatch"/>
+        <isServiceEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#OpenStack_Ceilometer"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ResourcePool -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#Agnostic_ResourcePool">
+        <rdf:type rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#CloudService"/>
+        <offeredBy rdf:resource="http://127.0.0.1/ontologies/CSOntology.owl#Agnostic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#TypeInstance -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#TypeInstance">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#InstanceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_ComputeVMRequestID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_ComputeVMRequestID">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#EC2requestID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_ConfigureInstanceHealth -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_ConfigureInstanceHealth">
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorAssociate"/>
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#HealthMonitorCreate"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#ConfigureHealthCheck"/>
+        <isPartMethodCompositionOf rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MonitorConfiguration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateLB -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateLB">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancer"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateTrafficManagerProfile"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#LoadBalancerCreate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateLBConfiguration -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateLBConfiguration">
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancerListeners"/>
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#SetLoadBalancerPoliciesOfListeners"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#LoadBalancerCreate"/>
+        <isPartMethodCompositionOf rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MonitorConfiguration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateLBPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateLBPolicy">
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ApplyPolicy"/>
+        <isMethodCompositionEquivalentTo rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#PolicyCreate"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#CreateLoadBalancerPolicy"/>
+        <isPartMethodCompositionOf rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#MonitorConfiguration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateMetric -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateMetric">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#PutMetricAlarm"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateMetricAlert"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#AlarmThresholdCreate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateQueue">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#CreateQueue"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureCreateQueue"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ZaqarCreateQueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateRMConfiguration -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateRMConfiguration">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#CreateLaunchConfiguration"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateAutoscalingSettingResource"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#StackCreate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateRMGroup -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateRMGroup">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#CreateAutoScalingGroup"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateScaleGroup"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#CreateScalingGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateRMPolicy -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateRMPolicy">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#PutScalingPolicy"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateScaleTriggerRule"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#CreateScalingPolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateStatistic -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateStatistic">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#PutMetricData"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateMetricData"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#SampleCreate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateVM -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateVM">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#RunInstance"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AddRoleVM"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#NovaBoot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_CreateVMSet -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_CreateVMSet">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#CreateAvailabilitySet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_DeleteMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_DeleteMessage">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#DeleteMessage"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ZaqarDeleteMessage"/>
+        <isPartMethodCompositionOf rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureReadAndDeleteMessage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_DeleteQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_DeleteQueue">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureDeleteQueue"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ZaqarDeleteQueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_DeleteVMSet -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_DeleteVMSet">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#DeleteAvailabilitySet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_GroupNameInstances -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_GroupNameInstances">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#GroupName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_GroupSecurity -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_GroupSecurity">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#SecurityGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_IDuser -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_IDuser">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#OwnerID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_ImageID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_ImageID">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#ImageID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_InstanceCapacities -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_InstanceCapacities">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#MaxCount"/>
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#MinCount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_InstanceID -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_InstanceID">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#InstanceID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_Key -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_Key">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#KeyName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_NameDNS -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_NameDNS">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#PrivateDNSname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_ReceiveMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_ReceiveMessage">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#ReceiveMessage"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ZaqarGetMessage"/>
+        <isPartMethodCompositionOf rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureReadAndDeleteMessage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_SendMessage -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_SendMessage">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#AzureSendMessage"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ZaqarPostMessage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_StartVM -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_StartVM">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#StartInstance"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/MicrosoftAzure.owl#StartRoleVM"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#NovaStart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_StopVM -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_StopVM">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#StopInstance"/>
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#NovaStop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_TimeCreation -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_TimeCreation">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#LaunchTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_TypeInstance -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_TypeInstance">
+        <isParameterEquivalent rdf:resource="http://127.0.0.1/ontologies/Amazon.owl#InstanceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://127.0.0.1/ontologies/ParametersNew.owl#_UpdateQueue -->
+
+    <owl:NamedIndividual rdf:about="http://127.0.0.1/ontologies/ParametersNew.owl#_UpdateQueue">
+        <isMethodEquivalent rdf:resource="http://127.0.0.1/ontologies/Openstack.owl#ZaqarPurgeQueue"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
