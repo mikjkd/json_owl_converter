@@ -43,6 +43,7 @@ def parse_data_properties(data):
     dp = []
     for i in data:
         v = i['service']['Properties']
+        v.append('ref')
         if v:
             dp.extend(v)
     return list(dict.fromkeys(dp))
@@ -57,9 +58,33 @@ def parse_data_properties_by_category_service(data, onto):
         sn = i['service']['name']
         sn = 'S' + sn.title().replace(' ', '')
         sp = i['service']['Properties']
+        sp.append('ref')
         sp = list(map(lambda s: s.title().replace(' ', ''), sp))
         v = []
         for k in sp:
             v.append(onto[k].some(str))
         dpc.append({'class': cn, 'name': sn, 'properties': v})
     return dpc
+
+
+def parse_individuals(data):
+    ind = []
+    for i in data:
+        sp = []
+        sn = i['service']['name']
+        sn = 'S' + sn.title().replace(' ', '')
+        sp = i['service']['Properties']
+        sp.append('ref')
+        sp = list(map(lambda s: s.title().replace(' ', ''), sp))
+        sp = list(dict.fromkeys(sp))
+        k = i.keys()
+        v = []
+        for j in k:
+            if j != 'service' and j != 'category':
+                for l in i[j]:
+                    if l['name']:
+                        lname = l['name']
+                        lname = lname.title().replace(' ', '')
+                        v.append({'vendor': j, 'individualName': lname, 'ref': l['ref'], 'properties': l['Properties']})
+        ind.append({'service': sn, 'service_properties': sp, 'individuals': v})
+    return ind
