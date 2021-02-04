@@ -1,6 +1,26 @@
 import re
 
 
+def clean_category(c):
+    c = c.title().replace(' ', '')
+    c = re.sub('[^A-Za-z0-9]+', '', c)
+    if 'Service' in c:
+        return c.replace('Service', '')
+    if 'Services' in c:
+        return c.replace('Services', '')
+    return c
+
+
+def clean(i):
+    i = i.title().replace(' ', '')
+    i = re.sub('[^A-Za-z0-9]+', '', i)
+    return i
+
+
+def remove_duplicate(p):
+    return list(dict.fromkeys(p))
+
+
 def parse_providers(data):
     p = []
     for i in data:
@@ -10,16 +30,19 @@ def parse_providers(data):
             if j != 'category' and j != "service":
                 p.append(j)
     # rimuovo i duplicati
-    return list(dict.fromkeys(p))
+    return remove_duplicate(p)
 
 
 def parse_categories(data):
     c = []
     for i in data:
-        c.append(i['category']['name'])
-    return list(dict.fromkeys(c))
+        cat = i['category']['name']
+        cat = clean_category(cat)
+        c.append(cat)
+    return remove_duplicate(c)
 
 
+# not used
 def parse_services_by_category(category, data):
     s = []
     for i in data:
@@ -28,6 +51,7 @@ def parse_services_by_category(category, data):
     return s
 
 
+# not used
 def parse_services(data):
     s = []
     cname = []
@@ -46,37 +70,41 @@ def parse_data_properties(data):
         v.append('ref')
         if v:
             dp.extend(v)
-    return list(dict.fromkeys(dp))
+    return remove_duplicate(dp)
 
 
 def parse_data_properties_by_category_service(data, onto):
     dpc = []
     for i in data:
         cn = i['category']['name']
-        cn = re.sub('[^A-Za-z0-9]+', '', cn)
-        cn = cn.replace(' ', '')
+        cn = clean_category(cn)
         sn = i['service']['name']
-        sn = 'S' + sn.title().replace(' ', '')
+        sn = clean(sn)
+        if cn == sn:
+            sn = sn + 'Service'
         sp = i['service']['Properties']
         sp.append('ref')
         sp = list(map(lambda s: s.title().replace(' ', ''), sp))
         v = []
         for k in sp:
             v.append(onto[k].some(str))
-        dpc.append({'class': cn, 'name': sn, 'properties': v})
+        dpc.append({'category': cn, 'service': sn, 'properties': v})
     return dpc
 
 
 def parse_individuals(data):
     ind = []
     for i in data:
-        sp = []
+        cn = i['category']['name']
+        cn = clean_category(cn)
         sn = i['service']['name']
-        sn = 'S' + sn.title().replace(' ', '')
+        sn = clean(sn)
+        if cn == sn:
+            sn = sn + 'Service'
         sp = i['service']['Properties']
         sp.append('ref')
         sp = list(map(lambda s: s.title().replace(' ', ''), sp))
-        sp = list(dict.fromkeys(sp))
+        sp = remove_duplicate(sp)
         k = i.keys()
         v = []
         for j in k:
@@ -84,7 +112,9 @@ def parse_individuals(data):
                 for l in i[j]:
                     if l['name']:
                         lname = l['name']
-                        lname = lname.title().replace(' ', '')
+                        lname = clean(lname)
+                        # rendo minuscola prima lettera
+                        lname = lname[0].lower() + lname[1:]
                         v.append({'vendor': j, 'individualName': lname, 'ref': l['ref'], 'properties': l['Properties']})
         ind.append({'service': sn, 'service_properties': sp, 'individuals': v})
     return ind
