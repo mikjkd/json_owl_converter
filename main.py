@@ -28,6 +28,16 @@ if __name__ == "__main__":
     dp = parse_data_properties(data)
     # creo le datatype property
     with onto:
+        # aggiungo dominio e range alla ObjectProperty isServiceEquivalent
+        class isServiceEquivalent(ObjectProperty):
+            domain = [onto[AGNOSTIC_CS]]
+            range = [onto[VENDOR_CS]]
+
+
+        class hasAgnosticEquivalent(ObjectProperty):
+            domain = [onto[VENDOR_CS]]
+            range = [onto[AGNOSTIC_CS]]
+
 
         # aggiungo dinamicamente le datatype property alle classi di service category
         for k in dp:
@@ -69,6 +79,7 @@ if __name__ == "__main__":
                             setattr(new_ind, p, [string_decode])
                         except IndexError:
                             setattr(new_ind, p, [TO_BE_ADDED])
+                new_ind.hasAgnosticEquivalent = [agnostic_ind]
                 new_ind_list.append(new_ind)
             # dico che individuo agnostico è equivalente a lista individui vendor specific
             agnostic_ind.isServiceEquivalent = new_ind_list
