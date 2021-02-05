@@ -6,17 +6,16 @@ import types
 import re
 from consts import *
 
-
 if __name__ == "__main__":
     # apro json
     f = open(FILE_SERVICES)
     data = json.load(f)
     # apro ontologia
     onto = get_ontology(CSONTOLOGY).load()
-    #aggiungo AgnosticCloudService sotto CloudService
-    agnostic_class = types.new_class(AGNOSTIC_CS, (onto.CloudService,) )
-    #aggiungo VendorSpecificCloudService sotto CloudService
-    vendor_class = types.new_class(VENDOR_CS, (onto.CloudService,) )
+    # aggiungo AgnosticCloudService sotto CloudService
+    agnostic_class = types.new_class(AGNOSTIC_CS, (onto.CloudService,))
+    # aggiungo VendorSpecificCloudService sotto CloudService
+    vendor_class = types.new_class(VENDOR_CS, (onto.CloudService,))
     # inserisco individui CloudProvider
     providers = parse_providers(data)
     # new_providers = map(lambda i: onto.CloudProvider(i), providers)
@@ -35,7 +34,6 @@ if __name__ == "__main__":
             e = re.sub('[^A-Za-z0-9]+', ' ', k).title().replace(' ', '')
             nc = type(e, (DatatypeProperty,), {DOMAIN: [onto.ServiceCategory], RANGE: [str]})
 
-
         # aggiungo le restrizioni alla classe
         for d in parse_data_properties_by_category_service(data, onto):
             # classe da ereditare
@@ -44,18 +42,20 @@ if __name__ == "__main__":
             attr = d[PROPERTIES]
             attr.append(onto.offeredBy.exactly(1, onto.CloudProvider))
             nr = type(service, (onto[category],), {ISA: attr})
-            #creazione individuo agnostic
-            agnostic_ind = onto[service]('Agnostic_'+service)
-            agnostic_ind.is_a = [onto[AGNOSTIC_CS], onto[service]]
+            # creazione individuo agnostic
+
         # inserisco individui
         indlist = list(onto.individuals())
 
         for ind in parse_individuals(data):
+            sname = ind[SERVICE]
+            agnostic_ind = onto[service]('Agnostic_' + sname)
+            agnostic_ind.is_a = [onto[AGNOSTIC_CS], onto[sname]]
+            new_ind_list = []
             for i in ind[INDIVIDUALS]:
                 indname = i[INDIVIDUAL_NAME]
-                sname = ind[SERVICE]
                 new_ind = onto[sname](indname)
-                #creazione individuo collocato in VendorSpecificCloudService e nella classe Service corretta
+                # creazione individuo collocato in VendorSpecificCloudService e nella classe Service corretta
                 new_ind.is_a = [onto[VENDOR_CS], onto[sname]]
                 new_ind.offeredBy = [onto[i[VENDOR]]]
                 for pos, p in enumerate(ind[SERVICE_PROPERTIES]):
@@ -69,4 +69,7 @@ if __name__ == "__main__":
                             setattr(new_ind, p, [string_decode])
                         except IndexError:
                             setattr(new_ind, p, [TO_BE_ADDED])
+                new_ind_list.append(new_ind)
+            # dico che individuo agnostico è equivalente a lista individui vendor specific
+            agnostic_ind.isServiceEquivalent = new_ind_list
     onto.save(file=CSONTOLOGYEXTENDED)

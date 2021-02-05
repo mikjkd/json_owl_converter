@@ -321,16 +321,16 @@
   <rdfs:subClassOf rdf:resource="#ServiceCategory"/>
   <rdfs:subClassOf>
     <owl:Restriction>
-      <owl:onProperty rdf:resource="#offeredBy"/>
-      <owl:onClass rdf:resource="#CloudProvider"/>
-      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+      <owl:onProperty rdf:resource="#Ref"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:Restriction>
   </rdfs:subClassOf>
   <rdfs:subClassOf rdf:resource="#Networking"/>
   <rdfs:subClassOf>
     <owl:Restriction>
-      <owl:onProperty rdf:resource="#Ref"/>
-      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      <owl:onProperty rdf:resource="#offeredBy"/>
+      <owl:onClass rdf:resource="#CloudProvider"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </owl:Restriction>
   </rdfs:subClassOf>
   <rdfs:subClassOf>
@@ -6052,480 +6052,14 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </CloudProvider>
 
-<SharedWebHosting rdf:about="#Agnostic_SharedWebHosting">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</SharedWebHosting>
-
-<VirtualServer rdf:about="#Agnostic_VirtualServer">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</VirtualServer>
-
-<BareMetalServer rdf:about="#Agnostic_BareMetalServer">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</BareMetalServer>
-
-<VirtualDedicatedHost rdf:about="#Agnostic_VirtualDedicatedHost">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</VirtualDedicatedHost>
-
-<ContainerRegistrationService rdf:about="#Agnostic_ContainerRegistrationService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ContainerRegistrationService>
-
-<ContainerManagementService rdf:about="#Agnostic_ContainerManagementService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ContainerManagementService>
-
-<MicroServicesAppDevelopmentPlatform rdf:about="#Agnostic_MicroServicesAppDevelopmentPlatform">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MicroServicesAppDevelopmentPlatform>
-
-<VirtualPrivateServers rdf:about="#Agnostic_VirtualPrivateServers">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</VirtualPrivateServers>
-
-<AutoScaling rdf:about="#Agnostic_AutoScaling">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</AutoScaling>
-
-<BatchJobs rdf:about="#Agnostic_BatchJobs">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</BatchJobs>
-
-<AppDevelopmentDeploymentJavaNetPhpPython rdf:about="#Agnostic_AppDevelopmentDeploymentJavaNetPhpPython">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</AppDevelopmentDeploymentJavaNetPhpPython>
-
-<EventDrivenComputing rdf:about="#Agnostic_EventDrivenComputing">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</EventDrivenComputing>
-
-<ObjectStorage rdf:about="#Agnostic_ObjectStorage">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ObjectStorage>
-
-<VirtualMachineDiskStorage rdf:about="#Agnostic_VirtualMachineDiskStorage">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</VirtualMachineDiskStorage>
-
-<FileStorageSmbCompatible rdf:about="#Agnostic_FileStorageSmbCompatible">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</FileStorageSmbCompatible>
-
-<LongTermColdStorage rdf:about="#Agnostic_LongTermColdStorage">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LongTermColdStorage>
-
-<HybridStorageStorageGateway rdf:about="#Agnostic_HybridStorageStorageGateway">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</HybridStorageStorageGateway>
-
-<RelationalDatabaseManagementService rdf:about="#Agnostic_RelationalDatabaseManagementService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</RelationalDatabaseManagementService>
-
-<NonRelationalDatabaseManagementService rdf:about="#Agnostic_NonRelationalDatabaseManagementService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</NonRelationalDatabaseManagementService>
-
-<TimeseriesDatabase rdf:about="#Agnostic_TimeseriesDatabase">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</TimeseriesDatabase>
-
-<InMemoryDataStore rdf:about="#Agnostic_InMemoryDataStore">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</InMemoryDataStore>
-
-<DataWarehousing rdf:about="#Agnostic_DataWarehousing">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DataWarehousing>
-
-<DatabaseMigrationServices rdf:about="#Agnostic_DatabaseMigrationServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DatabaseMigrationServices>
-
-<ServerMigrationServices rdf:about="#Agnostic_ServerMigrationServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ServerMigrationServices>
-
-<SmallScaleDataTransferService rdf:about="#Agnostic_SmallScaleDataTransferService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</SmallScaleDataTransferService>
-
-<LargeScaleDataTransferSolutionPetabyteScale rdf:about="#Agnostic_LargeScaleDataTransferSolutionPetabyteScale">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LargeScaleDataTransferSolutionPetabyteScale>
-
-<LargeScaleDataTransferSolutionTerabyteScale rdf:about="#Agnostic_LargeScaleDataTransferSolutionTerabyteScale">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LargeScaleDataTransferSolutionTerabyteScale>
-
-<LargeScaleDataTransferSolutionExabyteScale rdf:about="#Agnostic_LargeScaleDataTransferSolutionExabyteScale">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LargeScaleDataTransferSolutionExabyteScale>
-
-<ApplicationDiscoveryServices rdf:about="#Agnostic_ApplicationDiscoveryServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ApplicationDiscoveryServices>
-
-<VirtualNetworking rdf:about="#Agnostic_VirtualNetworking">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</VirtualNetworking>
-
-<NetworkGateway rdf:about="#Agnostic_NetworkGateway">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</NetworkGateway>
-
-<ContentDeliveryNetwork rdf:about="#Agnostic_ContentDeliveryNetwork">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ContentDeliveryNetwork>
-
-<NetworkingContentDelivery rdf:about="#Agnostic_NetworkingContentDelivery">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</NetworkingContentDelivery>
-
-<GlobalTrafficManagement rdf:about="#Agnostic_GlobalTrafficManagement">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</GlobalTrafficManagement>
-
-<HybridCloudService rdf:about="#Agnostic_HybridCloudService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</HybridCloudService>
-
-<PrivateConnectivity rdf:about="#Agnostic_PrivateConnectivity">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</PrivateConnectivity>
-
-<LoadBalancers rdf:about="#Agnostic_LoadBalancers">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LoadBalancers>
-
-<CloudSoftwareDevelopmentKit rdf:about="#Agnostic_CloudSoftwareDevelopmentKit">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudSoftwareDevelopmentKit>
-
-<ServerManagementServices rdf:about="#Agnostic_ServerManagementServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ServerManagementServices>
-
-<CloudDeploymentTemplatesInfraAsCode rdf:about="#Agnostic_CloudDeploymentTemplatesInfraAsCode">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudDeploymentTemplatesInfraAsCode>
-
-<LoggingMonitoring rdf:about="#Agnostic_LoggingMonitoring">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LoggingMonitoring>
-
-<ResourceConfigurationInventory rdf:about="#Agnostic_ResourceConfigurationInventory">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ResourceConfigurationInventory>
-
-<ServerAutomation rdf:about="#Agnostic_ServerAutomation">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ServerAutomation>
-
-<CloudCostPerformanceSecurityAdvisor rdf:about="#Agnostic_CloudCostPerformanceSecurityAdvisor">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudCostPerformanceSecurityAdvisor>
-
-<AlertsAndRemediationGuidanceService rdf:about="#Agnostic_AlertsAndRemediationGuidanceService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</AlertsAndRemediationGuidanceService>
-
-<CloudManagementTools rdf:about="#Agnostic_CloudManagementTools">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudManagementTools>
-
-<AutomatedInfraManagementServices rdf:about="#Agnostic_AutomatedInfraManagementServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</AutomatedInfraManagementServices>
-
-<AutomatedDisasterRecoveryServices rdf:about="#Agnostic_AutomatedDisasterRecoveryServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</AutomatedDisasterRecoveryServices>
-
-<IdentityAccessManagement rdf:about="#Agnostic_IdentityAccessManagement">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</IdentityAccessManagement>
-
-<CloudSecurityAssesmentService rdf:about="#Agnostic_CloudSecurityAssesmentService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudSecurityAssesmentService>
-
-<SecuredSocketLayerSslCertificates rdf:about="#Agnostic_SecuredSocketLayerSslCertificates">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</SecuredSocketLayerSslCertificates>
-
-<HardwareBasedSecurityModule rdf:about="#Agnostic_HardwareBasedSecurityModule">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</HardwareBasedSecurityModule>
-
-<DirectoryServices rdf:about="#Agnostic_DirectoryServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DirectoryServices>
-
-<KeyManagementServices rdf:about="#Agnostic_KeyManagementServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</KeyManagementServices>
-
-<ConsolidatedManagementOfMultipleCloudAccounts rdf:about="#Agnostic_ConsolidatedManagementOfMultipleCloudAccounts">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ConsolidatedManagementOfMultipleCloudAccounts>
-
-<DdosProtectionService rdf:about="#Agnostic_DdosProtectionService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DdosProtectionService>
-
-<WebApplicationFirewall rdf:about="#Agnostic_WebApplicationFirewall">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</WebApplicationFirewall>
-
-<SecurityComplianceService rdf:about="#Agnostic_SecurityComplianceService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</SecurityComplianceService>
-
-<BigDataQueryAsAService rdf:about="#Agnostic_BigDataQueryAsAService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</BigDataQueryAsAService>
-
-<BigDataManagedClusterAsAService rdf:about="#Agnostic_BigDataManagedClusterAsAService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</BigDataManagedClusterAsAService>
-
-<CloudSearch rdf:about="#Agnostic_CloudSearch">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudSearch>
-
-<StreamingService rdf:about="#Agnostic_StreamingService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</StreamingService>
-
-<DataWarehouse rdf:about="#Agnostic_DataWarehouse">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DataWarehouse>
-
-<BusinessIntelligenceDataVisualization rdf:about="#Agnostic_BusinessIntelligenceDataVisualization">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</BusinessIntelligenceDataVisualization>
-
-<CloudEtl rdf:about="#Agnostic_CloudEtl">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudEtl>
-
-<LanguageProcessingAi rdf:about="#Agnostic_LanguageProcessingAi">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</LanguageProcessingAi>
-
-<SpeechRecognitionAi rdf:about="#Agnostic_SpeechRecognitionAi">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</SpeechRecognitionAi>
-
-<ImageRecognitionAi rdf:about="#Agnostic_ImageRecognitionAi">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ImageRecognitionAi>
-
-<MachineLearning rdf:about="#Agnostic_MachineLearning">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MachineLearning>
-
-<MobileAppDevelopmentServices rdf:about="#Agnostic_MobileAppDevelopmentServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MobileAppDevelopmentServices>
-
-<WebApiManagementService rdf:about="#Agnostic_WebApiManagementService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</WebApiManagementService>
-
-<WebMobileAuthenticationServices rdf:about="#Agnostic_WebMobileAuthenticationServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</WebMobileAuthenticationServices>
-
-<ConsolidatedMgmtOfMultipleCloudAccounts rdf:about="#Agnostic_ConsolidatedMgmtOfMultipleCloudAccounts">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ConsolidatedMgmtOfMultipleCloudAccounts>
-
-<ManagedCloudServices rdf:about="#Agnostic_ManagedCloudServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ManagedCloudServices>
-
-<MobileAppTestingService rdf:about="#Agnostic_MobileAppTestingService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MobileAppTestingService>
-
-<MobileAppSoftwareDevelopmentToolkit rdf:about="#Agnostic_MobileAppSoftwareDevelopmentToolkit">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MobileAppSoftwareDevelopmentToolkit>
-
-<ApplicationServices rdf:about="#Agnostic_ApplicationServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ApplicationServices>
-
-<MobileAppAnalytics rdf:about="#Agnostic_MobileAppAnalytics">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MobileAppAnalytics>
-
-<ApiManagementService rdf:about="#Agnostic_ApiManagementService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</ApiManagementService>
-
-<MediaTranscoders rdf:about="#Agnostic_MediaTranscoders">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MediaTranscoders>
-
-<QueuingServices rdf:about="#Agnostic_QueuingServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</QueuingServices>
-
-<MobileAnalytics rdf:about="#Agnostic_MobileAnalytics">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</MobileAnalytics>
-
-<EmailServices rdf:about="#Agnostic_EmailServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</EmailServices>
-
-<NotificationServices rdf:about="#Agnostic_NotificationServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</NotificationServices>
-
-<BlockchainServices rdf:about="#Agnostic_BlockchainServices">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</BlockchainServices>
-
-<Chatbot rdf:about="#Agnostic_Chatbot">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</Chatbot>
-
-<OfficeDocumentSolutions rdf:about="#Agnostic_OfficeDocumentSolutions">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</OfficeDocumentSolutions>
-
-<DesktopApplicationStreaming rdf:about="#Agnostic_DesktopApplicationStreaming">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DesktopApplicationStreaming>
-
-<CloudMarketplace rdf:about="#Agnostic_CloudMarketplace">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</CloudMarketplace>
-
-<IotPlatform rdf:about="#Agnostic_IotPlatform">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</IotPlatform>
-
-<IotDevelopmentSolutions rdf:about="#Agnostic_IotDevelopmentSolutions">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</IotDevelopmentSolutions>
-
-<IotHardware rdf:about="#Agnostic_IotHardware">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</IotHardware>
-
-<GameDevelopmentService rdf:about="#Agnostic_GameDevelopmentService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</GameDevelopmentService>
-
-<RoboticsDevelopmentService rdf:about="#Agnostic_RoboticsDevelopmentService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</RoboticsDevelopmentService>
-
-<DevelopmentTestingService rdf:about="#Agnostic_DevelopmentTestingService">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#AgnosticCloudService"/>
-</DevelopmentTestingService>
+<AgnosticCloudService rdf:about="#Agnostic_SharedWebHosting">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#SharedWebHosting"/>
+  <isServiceEquivalent rdf:resource="#webHostingServices"/>
+  <isServiceEquivalent rdf:resource="#simpleApplicationServer"/>
+  <isServiceEquivalent rdf:resource="#azureSharedAppServices"/>
+  <isServiceEquivalent rdf:resource="#webHosting"/>
+</AgnosticCloudService>
 
 <SharedWebHosting rdf:about="#azureSharedAppServices">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -6579,6 +6113,22 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/swas#product-details</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
+
+<VirtualServer rdf:about="#Agnostic_VirtualServer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureVirtualMachine"/>
+  <isServiceEquivalent rdf:resource="#classicVirtualServer"/>
+  <isServiceEquivalent rdf:resource="#virtualServerForVpc"/>
+  <isServiceEquivalent rdf:resource="#amazonEc2"/>
+  <isServiceEquivalent rdf:resource="#powerSystemsVirtualServers"/>
+  <isServiceEquivalent rdf:resource="#vmwareSharedServerInstance"/>
+  <isServiceEquivalent rdf:resource="#computeEngine"/>
+  <isServiceEquivalent rdf:resource="#vmwareDedicatedVcenterService"/>
+  <isServiceEquivalent rdf:resource="#hyperProtectVirtualServer"/>
+  <isServiceEquivalent rdf:resource="#compute"/>
+  <isServiceEquivalent rdf:resource="#alibabaEcs"/>
+</VirtualServer>
 
 <VirtualServer rdf:about="#amazonEc2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -6725,6 +6275,15 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/ecs</Ref>
 </VirtualServer>
 
+<BareMetalServer rdf:about="#Agnostic_BareMetalServer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#bareMetalServers"/>
+  <isServiceEquivalent rdf:resource="#ecsBareMetalInstance"/>
+  <isServiceEquivalent rdf:resource="#amazonEc2BareMetalInstancePreview"/>
+  <isServiceEquivalent rdf:resource="#azureBareMetalServersLargeInstanceOnlyForSapHana"/>
+</BareMetalServer>
+
 <BareMetalServer rdf:about="#amazonEc2BareMetalInstancePreview">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -6776,6 +6335,17 @@
   <TemporaryStorageLimits rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Up to 48 TB (Multiple Disks)</TemporaryStorageLimits>
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/ebm</Ref>
 </BareMetalServer>
+
+<VirtualDedicatedHost rdf:about="#Agnostic_VirtualDedicatedHost">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonEc2DedicatedHosts"/>
+  <isServiceEquivalent rdf:resource="#dedicatedHost"/>
+  <isServiceEquivalent rdf:resource="#azureDedicatedHost"/>
+  <isServiceEquivalent rdf:resource="#soleTenantNodeBeta"/>
+  <isServiceEquivalent rdf:resource="#dedicatedVirtualServersInfrastructureVsi"/>
+  <isServiceEquivalent rdf:resource="#dedicatedComputeClassic"/>
+</VirtualDedicatedHost>
 
 <VirtualDedicatedHost rdf:about="#amazonEc2DedicatedHosts">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -6855,6 +6425,16 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/ddh</Ref>
 </VirtualDedicatedHost>
 
+<ContainerRegistrationService rdf:about="#Agnostic_ContainerRegistrationService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#containerRegistry"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudContainerRegistry"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticContainerRegistry"/>
+  <isServiceEquivalent rdf:resource="#oracleCloudInfrastructureRegistry"/>
+  <isServiceEquivalent rdf:resource="#azureContainerRegistry"/>
+</ContainerRegistrationService>
+
 <ContainerRegistrationService rdf:about="#amazonElasticContainerRegistry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -6894,6 +6474,22 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.oracle.com/containers/registry</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ContainerRegistrationService>
+
+<AgnosticCloudService rdf:about="#Agnostic_ContainerManagementService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ContainerManagementService"/>
+  <isServiceEquivalent rdf:resource="#containerServiceForKubernetes"/>
+  <isServiceEquivalent rdf:resource="#amazonEc2ContainerService"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticContainerServiceForKubernetesEks"/>
+  <isServiceEquivalent rdf:resource="#azureKubernetesServiceAks"/>
+  <isServiceEquivalent rdf:resource="#azureContainerInstances"/>
+  <isServiceEquivalent rdf:resource="#kubernetesEngine"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudKubernetesService"/>
+  <isServiceEquivalent rdf:resource="#redhatOpenshiftKubernetesService"/>
+  <isServiceEquivalent rdf:resource="#codeEngine"/>
+  <isServiceEquivalent rdf:resource="#containerEngineForKubernetesOke"/>
+  <isServiceEquivalent rdf:resource="#containerService"/>
+</AgnosticCloudService>
 
 <ContainerManagementService rdf:about="#amazonEc2ContainerService">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -6983,6 +6579,20 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ContainerManagementService>
 
+<AgnosticCloudService rdf:about="#Agnostic_MicroServicesAppDevelopmentPlatform">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#MicroServicesAppDevelopmentPlatform"/>
+  <isServiceEquivalent rdf:resource="#azureServiceFabric"/>
+  <isServiceEquivalent rdf:resource="#azureFunctions"/>
+  <isServiceEquivalent rdf:resource="#eventGrid"/>
+  <isServiceEquivalent rdf:resource="#awsLambda"/>
+  <isServiceEquivalent rdf:resource="#googleCloudFunctions"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudCodeEngine"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudFunctions"/>
+  <isServiceEquivalent rdf:resource="#oracleFunctions"/>
+  <isServiceEquivalent rdf:resource="#functionCompute"/>
+</AgnosticCloudService>
+
 <VendorSpecificCloudService rdf:about="#awsLambda">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#EventDrivenComputing"/>
@@ -7055,6 +6665,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<AgnosticCloudService rdf:about="#Agnostic_VirtualPrivateServers">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#VirtualPrivateServers"/>
+  <isServiceEquivalent rdf:resource="#amazonLightsail"/>
+  <isServiceEquivalent rdf:resource="#azureAppServiceEnvironment"/>
+  <isServiceEquivalent rdf:resource="#classicVirtualServer"/>
+  <isServiceEquivalent rdf:resource="#simpleApplicationServer"/>
+  <isServiceEquivalent rdf:resource="#virtualServerForVpc"/>
+</AgnosticCloudService>
+
 <VirtualPrivateServers rdf:about="#amazonLightsail">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7070,6 +6690,15 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://docs.microsoft.com/en-us/azure/app-service-web/app-service-app-service-environment-intro</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </VirtualPrivateServers>
+
+<AutoScaling rdf:about="#Agnostic_AutoScaling">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#autoScaling"/>
+  <isServiceEquivalent rdf:resource="#autoScaler"/>
+  <isServiceEquivalent rdf:resource="#azureAutoscale"/>
+  <isServiceEquivalent rdf:resource="#virtualMachineScaleSets"/>
+</AutoScaling>
 
 <AutoScaling rdf:about="#autoScaling">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7103,6 +6732,17 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </AutoScaling>
 
+<BatchJobs rdf:about="#Agnostic_BatchJobs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsBatch"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudCodeEngine"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudFunctions"/>
+  <isServiceEquivalent rdf:resource="#preemptibleVms"/>
+  <isServiceEquivalent rdf:resource="#batchCompute"/>
+  <isServiceEquivalent rdf:resource="#azureBatch"/>
+</BatchJobs>
+
 <BatchJobs rdf:about="#awsBatch">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7134,6 +6774,20 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/batch-compute</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </BatchJobs>
+
+<AppDevelopmentDeploymentJavaNetPhpPython rdf:about="#Agnostic_AppDevelopmentDeploymentJavaNetPhpPython">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudFoundryApps"/>
+  <isServiceEquivalent rdf:resource="#javaCloudService"/>
+  <isServiceEquivalent rdf:resource="#applicationContainerCloud"/>
+  <isServiceEquivalent rdf:resource="#enterpriseDistributedApplicationService"/>
+  <isServiceEquivalent rdf:resource="#awsElasticBeanstalk"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudCodeEngine"/>
+  <isServiceEquivalent rdf:resource="#azureWebApps"/>
+  <isServiceEquivalent rdf:resource="#azureCloudServices"/>
+  <isServiceEquivalent rdf:resource="#googleAppEngine"/>
+</AppDevelopmentDeploymentJavaNetPhpPython>
 
 <AppDevelopmentDeploymentJavaNetPhpPython rdf:about="#awsElasticBeanstalk">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7199,6 +6853,19 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </AppDevelopmentDeploymentJavaNetPhpPython>
 
+<EventDrivenComputing rdf:about="#Agnostic_EventDrivenComputing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudFunctions"/>
+  <isServiceEquivalent rdf:resource="#azureFunctions"/>
+  <isServiceEquivalent rdf:resource="#eventGrid"/>
+  <isServiceEquivalent rdf:resource="#awsLambda"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudCodeEngine"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudFunctions"/>
+  <isServiceEquivalent rdf:resource="#oracleFunctions"/>
+  <isServiceEquivalent rdf:resource="#functionCompute"/>
+</EventDrivenComputing>
+
 <EventDrivenComputing rdf:about="#cloudFunctions">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7206,6 +6873,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.google.com/functions/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </EventDrivenComputing>
+
+<ObjectStorage rdf:about="#Agnostic_ObjectStorage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudObjectStorage"/>
+  <isServiceEquivalent rdf:resource="#amazonSimpleStorageServiceS3"/>
+  <isServiceEquivalent rdf:resource="#objectStorage"/>
+  <isServiceEquivalent rdf:resource="#objectStorageService"/>
+  <isServiceEquivalent rdf:resource="#azureBlobStorage"/>
+  <isServiceEquivalent rdf:resource="#cloudStorage"/>
+</ObjectStorage>
 
 <ObjectStorage rdf:about="#amazonSimpleStorageServiceS3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7255,6 +6933,17 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ObjectStorage>
 
+<VirtualMachineDiskStorage rdf:about="#Agnostic_VirtualMachineDiskStorage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azurePageBlobsPremiumStorage"/>
+  <isServiceEquivalent rdf:resource="#managedDisks"/>
+  <isServiceEquivalent rdf:resource="#persistentDisk"/>
+  <isServiceEquivalent rdf:resource="#blockStorage"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticBlockStorageEbs"/>
+  <isServiceEquivalent rdf:resource="#blockStorageForVpc"/>
+</VirtualMachineDiskStorage>
+
 <VirtualMachineDiskStorage rdf:about="#amazonElasticBlockStorageEbs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7303,6 +6992,17 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VirtualMachineDiskStorage>
 
+<FileStorageSmbCompatible rdf:about="#Agnostic_FileStorageSmbCompatible">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#oracleCloudInfrastructureFileStorage"/>
+  <isServiceEquivalent rdf:resource="#nasFileStorage"/>
+  <isServiceEquivalent rdf:resource="#azureFileStorage"/>
+  <isServiceEquivalent rdf:resource="#fileStore"/>
+  <isServiceEquivalent rdf:resource="#fileStorage"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticFileSystemEfs"/>
+</FileStorageSmbCompatible>
+
 <FileStorageSmbCompatible rdf:about="#amazonElasticFileSystemEfs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7350,6 +7050,20 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/nas</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </FileStorageSmbCompatible>
+
+<AgnosticCloudService rdf:about="#Agnostic_LongTermColdStorage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#LongTermColdStorage"/>
+  <isServiceEquivalent rdf:resource="#azureCoolStorage"/>
+  <isServiceEquivalent rdf:resource="#archivalStorageNearlineColdline"/>
+  <isServiceEquivalent rdf:resource="#archive"/>
+  <isServiceEquivalent rdf:resource="#objectStorageColdvault"/>
+  <isServiceEquivalent rdf:resource="#archiveStorage"/>
+  <isServiceEquivalent rdf:resource="#objectStorageArchive"/>
+  <isServiceEquivalent rdf:resource="#amazonGlacier"/>
+  <isServiceEquivalent rdf:resource="#cloudStorage"/>
+  <isServiceEquivalent rdf:resource="#azureArchiveStorage"/>
+</AgnosticCloudService>
 
 <LongTermColdStorage rdf:about="#amazonGlacier">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7415,6 +7129,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </LongTermColdStorage>
 
+<HybridStorageStorageGateway rdf:about="#Agnostic_HybridStorageStorageGateway">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#hybridCloudStorageArray"/>
+  <isServiceEquivalent rdf:resource="#azureStorsimple"/>
+  <isServiceEquivalent rdf:resource="#storageSoftwareAppliance"/>
+  <isServiceEquivalent rdf:resource="#awsStorageGateway"/>
+</HybridStorageStorageGateway>
+
 <HybridStorageStorageGateway rdf:about="#awsStorageGateway">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7446,6 +7169,31 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/storage-array</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </HybridStorageStorageGateway>
+
+<RelationalDatabaseManagementService rdf:about="#Agnostic_RelationalDatabaseManagementService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#db2"/>
+  <isServiceEquivalent rdf:resource="#db2Hosted"/>
+  <isServiceEquivalent rdf:resource="#informix"/>
+  <isServiceEquivalent rdf:resource="#databasesForPostgresql"/>
+  <isServiceEquivalent rdf:resource="#composeForMysqlBeta"/>
+  <isServiceEquivalent rdf:resource="#dbaas"/>
+  <isServiceEquivalent rdf:resource="#mysqlService"/>
+  <isServiceEquivalent rdf:resource="#apsaradbForRdsMysql"/>
+  <isServiceEquivalent rdf:resource="#amazonAurora"/>
+  <isServiceEquivalent rdf:resource="#apsaradbForRdsSqlServer"/>
+  <isServiceEquivalent rdf:resource="#apsaradbForRdsPostgresql"/>
+  <isServiceEquivalent rdf:resource="#distributedRelationalDatabaseServiceDrds"/>
+  <isServiceEquivalent rdf:resource="#amazonRds"/>
+  <isServiceEquivalent rdf:resource="#azureSqlDatabase"/>
+  <isServiceEquivalent rdf:resource="#sqlServerStretchDatabase"/>
+  <isServiceEquivalent rdf:resource="#azureDatabaseForMysql"/>
+  <isServiceEquivalent rdf:resource="#azureDatabaseForPostgressql"/>
+  <isServiceEquivalent rdf:resource="#azureSqlDatabaseEdge"/>
+  <isServiceEquivalent rdf:resource="#cloudSql"/>
+  <isServiceEquivalent rdf:resource="#cloudSpanner"/>
+</RelationalDatabaseManagementService>
 
 <RelationalDatabaseManagementService rdf:about="#amazonAurora">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7607,6 +7355,25 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </RelationalDatabaseManagementService>
 
+<NonRelationalDatabaseManagementService rdf:about="#Agnostic_NonRelationalDatabaseManagementService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#composeForJanusgraph"/>
+  <isServiceEquivalent rdf:resource="#amazonDynamodb"/>
+  <isServiceEquivalent rdf:resource="#amazonDynamodbAcceleratorDax"/>
+  <isServiceEquivalent rdf:resource="#nosqlDatabase"/>
+  <isServiceEquivalent rdf:resource="#amazonNeptune"/>
+  <isServiceEquivalent rdf:resource="#apsaradbForMongodb"/>
+  <isServiceEquivalent rdf:resource="#azureCosmosdb"/>
+  <isServiceEquivalent rdf:resource="#tableStore"/>
+  <isServiceEquivalent rdf:resource="#tableStorage"/>
+  <isServiceEquivalent rdf:resource="#azureTimeSeriesInsights"/>
+  <isServiceEquivalent rdf:resource="#cloudDatastore"/>
+  <isServiceEquivalent rdf:resource="#cloudBigtable"/>
+  <isServiceEquivalent rdf:resource="#databasesForMongodb"/>
+  <isServiceEquivalent rdf:resource="#cloudantNosqlDb"/>
+</NonRelationalDatabaseManagementService>
+
 <VendorSpecificCloudService rdf:about="#amazonDynamodb">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#TimeseriesDatabase"/>
@@ -7719,6 +7486,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </NonRelationalDatabaseManagementService>
 
+<TimeseriesDatabase rdf:about="#Agnostic_TimeseriesDatabase">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#hitsdbHighPerformanceTimeSeriesDatabase"/>
+  <isServiceEquivalent rdf:resource="#azureTimeSeriesInsights"/>
+  <isServiceEquivalent rdf:resource="#amazonDynamodb"/>
+  <isServiceEquivalent rdf:resource="#informix"/>
+  <isServiceEquivalent rdf:resource="#cloudBigtable"/>
+</TimeseriesDatabase>
+
 <TimeseriesDatabase rdf:about="#hitsdbHighPerformanceTimeSeriesDatabase">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7726,6 +7503,16 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/hitsdb?spm=a3c0i.11270126.675768.dnavproductsd8.6c8668dcRLNbeB</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </TimeseriesDatabase>
+
+<AgnosticCloudService rdf:about="#Agnostic_InMemoryDataStore">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#InMemoryDataStore"/>
+  <isServiceEquivalent rdf:resource="#azureRediscache"/>
+  <isServiceEquivalent rdf:resource="#cloudMemorystoreBeta"/>
+  <isServiceEquivalent rdf:resource="#databasesForRedis"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticache"/>
+  <isServiceEquivalent rdf:resource="#apsaradbForRedis"/>
+</AgnosticCloudService>
 
 <InMemoryDataStore rdf:about="#amazonElasticache">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7766,6 +7553,18 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/apsaradb-for-redis</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </InMemoryDataStore>
+
+<AgnosticCloudService rdf:about="#Agnostic_DataWarehousing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#DataWarehousing"/>
+  <isServiceEquivalent rdf:resource="#exadata"/>
+  <isServiceEquivalent rdf:resource="#amazonRedshift"/>
+  <isServiceEquivalent rdf:resource="#autonomousDataWarehouseCloud"/>
+  <isServiceEquivalent rdf:resource="#alibabaMaxcomputeOdps"/>
+  <isServiceEquivalent rdf:resource="#azureSqlDataWarehouse"/>
+  <isServiceEquivalent rdf:resource="#bigquery"/>
+  <isServiceEquivalent rdf:resource="#db2WarehouseOnCloud"/>
+</AgnosticCloudService>
 
 <VendorSpecificCloudService rdf:about="#amazonRedshift">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7823,6 +7622,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<DatabaseMigrationServices rdf:about="#Agnostic_DatabaseMigrationServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#liftCli"/>
+  <isServiceEquivalent rdf:resource="#migrateToTheCloud"/>
+  <isServiceEquivalent rdf:resource="#dataTransmissionService"/>
+  <isServiceEquivalent rdf:resource="#awsDatabaseMigrationService"/>
+  <isServiceEquivalent rdf:resource="#azureDatabaseMigrationServicePreview"/>
+</DatabaseMigrationServices>
+
 <DatabaseMigrationServices rdf:about="#awsDatabaseMigrationService">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7863,6 +7672,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </DatabaseMigrationServices>
 
+<ServerMigrationServices rdf:about="#Agnostic_ServerMigrationServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudMigrationTool"/>
+  <isServiceEquivalent rdf:resource="#siteRecovery"/>
+  <isServiceEquivalent rdf:resource="#awsServerMigrationService"/>
+  <isServiceEquivalent rdf:resource="#azureWebsitesMigrationAssistant"/>
+</ServerMigrationServices>
+
 <ServerMigrationServices rdf:about="#awsServerMigrationService">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7894,6 +7712,16 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/help/doc-detail/62394.htm</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ServerMigrationServices>
+
+<SmallScaleDataTransferService rdf:about="#Agnostic_SmallScaleDataTransferService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsImportExport"/>
+  <isServiceEquivalent rdf:resource="#azureImportExport"/>
+  <isServiceEquivalent rdf:resource="#dataTransferService"/>
+  <isServiceEquivalent rdf:resource="#asperaHighSpeedTransfer"/>
+  <isServiceEquivalent rdf:resource="#dataTransferServicesHardDiskImport"/>
+</SmallScaleDataTransferService>
 
 <SmallScaleDataTransferService rdf:about="#awsImportExport">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -7935,6 +7763,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </SmallScaleDataTransferService>
 
+<LargeScaleDataTransferSolutionPetabyteScale rdf:about="#Agnostic_LargeScaleDataTransferSolutionPetabyteScale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#massDataMigrationService"/>
+  <isServiceEquivalent rdf:resource="#awsSnowball"/>
+  <isServiceEquivalent rdf:resource="#dataTransferServicesStorageApplicanceImport"/>
+  <isServiceEquivalent rdf:resource="#dataTransport"/>
+</LargeScaleDataTransferSolutionPetabyteScale>
+
 <LargeScaleDataTransferSolutionPetabyteScale rdf:about="#awsSnowball">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7967,6 +7804,17 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<LargeScaleDataTransferSolutionTerabyteScale rdf:about="#Agnostic_LargeScaleDataTransferSolutionTerabyteScale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsSnowballEdge"/>
+  <isServiceEquivalent rdf:resource="#azureDataBoxPreview"/>
+  <isServiceEquivalent rdf:resource="#massDataMigrationService"/>
+  <isServiceEquivalent rdf:resource="#transferApplianceBeta"/>
+  <isServiceEquivalent rdf:resource="#dataTransferServicesStorageApplicanceImport"/>
+  <isServiceEquivalent rdf:resource="#dataTransport"/>
+</LargeScaleDataTransferSolutionTerabyteScale>
+
 <LargeScaleDataTransferSolutionTerabyteScale rdf:about="#awsSnowballEdge">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7991,6 +7839,12 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </LargeScaleDataTransferSolutionTerabyteScale>
 
+<LargeScaleDataTransferSolutionExabyteScale rdf:about="#Agnostic_LargeScaleDataTransferSolutionExabyteScale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsSnowmobile"/>
+</LargeScaleDataTransferSolutionExabyteScale>
+
 <LargeScaleDataTransferSolutionExabyteScale rdf:about="#awsSnowmobile">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -7998,6 +7852,13 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://aws.amazon.com/snowmobile/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </LargeScaleDataTransferSolutionExabyteScale>
+
+<ApplicationDiscoveryServices rdf:about="#Agnostic_ApplicationDiscoveryServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#applicationDiscoveryService"/>
+  <isServiceEquivalent rdf:resource="#azureActiveDirectory"/>
+</ApplicationDiscoveryServices>
 
 <ApplicationDiscoveryServices rdf:about="#applicationDiscoveryService">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8014,6 +7875,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://azure.microsoft.com/en-us/services/active-directory/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </VendorSpecificCloudService>
+
+<VirtualNetworking rdf:about="#Agnostic_VirtualNetworking">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#virtualPrivateCloud"/>
+  <isServiceEquivalent rdf:resource="#azureVnet"/>
+  <isServiceEquivalent rdf:resource="#cloudVirtualNetwork"/>
+  <isServiceEquivalent rdf:resource="#amazonVpc"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudVpc"/>
+  <isServiceEquivalent rdf:resource="#oracleVirtualCloudNetwork"/>
+</VirtualNetworking>
 
 <VirtualNetworking rdf:about="#amazonVpc">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8062,6 +7934,18 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/vpc</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VirtualNetworking>
+
+<AgnosticCloudService rdf:about="#Agnostic_NetworkGateway">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#NetworkGateway"/>
+  <isServiceEquivalent rdf:resource="#cloudVpn"/>
+  <isServiceEquivalent rdf:resource="#classicIpsecVpn"/>
+  <isServiceEquivalent rdf:resource="#vpnGatewayForVpc"/>
+  <isServiceEquivalent rdf:resource="#amazonVpn"/>
+  <isServiceEquivalent rdf:resource="#vpnConnect"/>
+  <isServiceEquivalent rdf:resource="#vpnGateway"/>
+  <isServiceEquivalent rdf:resource="#azureVpnGateway"/>
+</AgnosticCloudService>
 
 <NetworkGateway rdf:about="#amazonVpn">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8119,6 +8003,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </NetworkGateway>
 
+<AgnosticCloudService rdf:about="#Agnostic_ContentDeliveryNetwork">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ContentDeliveryNetwork"/>
+  <isServiceEquivalent rdf:resource="#amazonCloudfront"/>
+  <isServiceEquivalent rdf:resource="#azureCdn"/>
+  <isServiceEquivalent rdf:resource="#cloudCdn"/>
+  <isServiceEquivalent rdf:resource="#contentDeliveryNetwork"/>
+  <isServiceEquivalent rdf:resource="#alibabaContentDeliveryNetwork"/>
+</AgnosticCloudService>
+
 <ContentDeliveryNetwork rdf:about="#amazonCloudfront">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -8158,6 +8052,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/cdn</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ContentDeliveryNetwork>
+
+<NetworkingContentDelivery rdf:about="#Agnostic_NetworkingContentDelivery">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#oracleDns"/>
+  <isServiceEquivalent rdf:resource="#amazonRoute53"/>
+  <isServiceEquivalent rdf:resource="#internetServices"/>
+  <isServiceEquivalent rdf:resource="#alibabaCloudDns"/>
+  <isServiceEquivalent rdf:resource="#azureDns"/>
+  <isServiceEquivalent rdf:resource="#cloudDns"/>
+</NetworkingContentDelivery>
 
 <NetworkingContentDelivery rdf:about="#amazonRoute53">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8207,6 +8112,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </NetworkingContentDelivery>
 
+<GlobalTrafficManagement rdf:about="#Agnostic_GlobalTrafficManagement">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonRoute53TrafficFlow"/>
+  <isServiceEquivalent rdf:resource="#ociTrafficManagement"/>
+  <isServiceEquivalent rdf:resource="#azureTrafficManager"/>
+  <isServiceEquivalent rdf:resource="#internetServices"/>
+</GlobalTrafficManagement>
+
 <GlobalTrafficManagement rdf:about="#amazonRoute53TrafficFlow">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -8230,6 +8144,16 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oracle.com/cloud/networking/traffic-management.html</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </GlobalTrafficManagement>
+
+<HybridCloudService rdf:about="#Agnostic_HybridCloudService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureArc"/>
+  <isServiceEquivalent rdf:resource="#awsOutposts"/>
+  <isServiceEquivalent rdf:resource="#satellite"/>
+  <isServiceEquivalent rdf:resource="#secureGateway"/>
+  <isServiceEquivalent rdf:resource="#cloudAtCustomer"/>
+</HybridCloudService>
 
 <HybridCloudService rdf:about="#awsOutposts">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8270,6 +8194,18 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oracle.com/cloud/cloud-at-customer.html</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </HybridCloudService>
+
+<PrivateConnectivity rdf:about="#Agnostic_PrivateConnectivity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#directLink"/>
+  <isServiceEquivalent rdf:resource="#awsDirectConnect"/>
+  <isServiceEquivalent rdf:resource="#fastConnect"/>
+  <isServiceEquivalent rdf:resource="#expressConnect"/>
+  <isServiceEquivalent rdf:resource="#awsPrivateLink"/>
+  <isServiceEquivalent rdf:resource="#azureExpressRoute"/>
+  <isServiceEquivalent rdf:resource="#cloudInterconnect"/>
+</PrivateConnectivity>
 
 <PrivateConnectivity rdf:about="#awsDirectConnect">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8326,6 +8262,19 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/express-connect</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </PrivateConnectivity>
+
+<AgnosticCloudService rdf:about="#Agnostic_LoadBalancers">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#LoadBalancers"/>
+  <isServiceEquivalent rdf:resource="#serverLoadBalancer"/>
+  <isServiceEquivalent rdf:resource="#azureLoadBalancer"/>
+  <isServiceEquivalent rdf:resource="#cloudLoadBalancing"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudLoadBalancers"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudLoadBalancerForVpc"/>
+  <isServiceEquivalent rdf:resource="#citrixNetscalerVpx"/>
+  <isServiceEquivalent rdf:resource="#elasticLoadBalancing"/>
+  <isServiceEquivalent rdf:resource="#oracleLoadBalancer"/>
+</AgnosticCloudService>
 
 <LoadBalancers rdf:about="#elasticLoadBalancing">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8390,6 +8339,23 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/server-load-balancer</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </LoadBalancers>
+
+<CloudSoftwareDevelopmentKit rdf:about="#Agnostic_CloudSoftwareDevelopmentKit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#continuousDelivery"/>
+  <isServiceEquivalent rdf:resource="#cloudToolsForAndroidStudio"/>
+  <isServiceEquivalent rdf:resource="#cloudToolsForPowershell"/>
+  <isServiceEquivalent rdf:resource="#googlePluginForEclipse"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudDeveloperTool"/>
+  <isServiceEquivalent rdf:resource="#visualBuilder"/>
+  <isServiceEquivalent rdf:resource="#awsSdk"/>
+  <isServiceEquivalent rdf:resource="#oracleEnterprisePackForEclipse"/>
+  <isServiceEquivalent rdf:resource="#apiCatalog"/>
+  <isServiceEquivalent rdf:resource="#oracleEnterprisePackForNetbeans"/>
+  <isServiceEquivalent rdf:resource="#azureSdkVisualStudio"/>
+  <isServiceEquivalent rdf:resource="#cloudSdkCloudToolsForIntellij"/>
+</CloudSoftwareDevelopmentKit>
 
 <CloudSoftwareDevelopmentKit rdf:about="#awsCloud9">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8615,6 +8581,14 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </CloudSoftwareDevelopmentKit>
 
+<AgnosticCloudService rdf:about="#Agnostic_ServerManagementServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ServerManagementServices"/>
+  <isServiceEquivalent rdf:resource="#azureOperationalInsights"/>
+  <isServiceEquivalent rdf:resource="#amazonEc2SystemsManager"/>
+  <isServiceEquivalent rdf:resource="#oracleManagementCloud"/>
+</AgnosticCloudService>
+
 <ServerManagementServices rdf:about="#amazonEc2SystemsManager">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -8638,6 +8612,19 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.oracle.com/en_US/management</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
+
+<CloudDeploymentTemplatesInfraAsCode rdf:about="#Agnostic_CloudDeploymentTemplatesInfraAsCode">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsCloudformation"/>
+  <isServiceEquivalent rdf:resource="#azureResourceManager"/>
+  <isServiceEquivalent rdf:resource="#azureBuildingBlocks"/>
+  <isServiceEquivalent rdf:resource="#cloudResourceManager"/>
+  <isServiceEquivalent rdf:resource="#cloudDeploymentManager"/>
+  <isServiceEquivalent rdf:resource="#schematics"/>
+  <isServiceEquivalent rdf:resource="#stackManager"/>
+  <isServiceEquivalent rdf:resource="#resourceOrchestrationService"/>
+</CloudDeploymentTemplatesInfraAsCode>
 
 <CloudDeploymentTemplatesInfraAsCode rdf:about="#awsCloudformation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8702,6 +8689,30 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/ros</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
+
+<AgnosticCloudService rdf:about="#Agnostic_LoggingMonitoring">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#LoggingMonitoring"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudLogAnalysisWithLogdna"/>
+  <isServiceEquivalent rdf:resource="#amazonCloudwatch"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudMonitoringWithSysdig"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudActivityTrackerWithLogdna"/>
+  <isServiceEquivalent rdf:resource="#applicationPerformanceMonitoring"/>
+  <isServiceEquivalent rdf:resource="#managementCloud"/>
+  <isServiceEquivalent rdf:resource="#cloudmonitor"/>
+  <isServiceEquivalent rdf:resource="#actiontrail"/>
+  <isServiceEquivalent rdf:resource="#applicationRealTimeMonitoringService"/>
+  <isServiceEquivalent rdf:resource="#trace"/>
+  <isServiceEquivalent rdf:resource="#awsCloudtrail"/>
+  <isServiceEquivalent rdf:resource="#logAnalytics"/>
+  <isServiceEquivalent rdf:resource="#azurePortal"/>
+  <isServiceEquivalent rdf:resource="#applicationInsights"/>
+  <isServiceEquivalent rdf:resource="#googleStackdriver"/>
+  <isServiceEquivalent rdf:resource="#monitoring"/>
+  <isServiceEquivalent rdf:resource="#logging"/>
+  <isServiceEquivalent rdf:resource="#errorReporting"/>
+  <isServiceEquivalent rdf:resource="#debugger"/>
+</AgnosticCloudService>
 
 <LoggingMonitoring rdf:about="#amazonCloudwatch">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -8855,6 +8866,19 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </LoggingMonitoring>
 
+<ResourceConfigurationInventory rdf:about="#Agnostic_ResourceConfigurationInventory">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsConfig"/>
+  <isServiceEquivalent rdf:resource="#azurePortalAuditLogs"/>
+  <isServiceEquivalent rdf:resource="#cloudSecurityScanner"/>
+  <isServiceEquivalent rdf:resource="#cloudDataLossPreventionApi"/>
+  <isServiceEquivalent rdf:resource="#accessTransparencyBeta"/>
+  <isServiceEquivalent rdf:resource="#appConfiguration"/>
+  <isServiceEquivalent rdf:resource="#oracleCloudGovernanceServices"/>
+  <isServiceEquivalent rdf:resource="#alibabaLogService"/>
+</ResourceConfigurationInventory>
+
 <ResourceConfigurationInventory rdf:about="#awsConfig">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -8919,6 +8943,12 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ResourceConfigurationInventory>
 
+<ServerAutomation rdf:about="#Agnostic_ServerAutomation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsServiceCatalog"/>
+</ServerAutomation>
+
 <ServerAutomation rdf:about="#awsOpsworks">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -8967,6 +8997,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </ServerAutomation>
 
+<CloudCostPerformanceSecurityAdvisor rdf:about="#Agnostic_CloudCostPerformanceSecurityAdvisor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureAdvisor"/>
+  <isServiceEquivalent rdf:resource="#azureCostManagement"/>
+  <isServiceEquivalent rdf:resource="#googleCloudPlatformSecurity"/>
+  <isServiceEquivalent rdf:resource="#awsTrustedAdvisor"/>
+</CloudCostPerformanceSecurityAdvisor>
+
 <CloudCostPerformanceSecurityAdvisor rdf:about="#awsTrustedAdvisor">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -8999,6 +9038,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </CloudCostPerformanceSecurityAdvisor>
 
+<AgnosticCloudService rdf:about="#Agnostic_AlertsAndRemediationGuidanceService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AlertsAndRemediationGuidanceService"/>
+  <isServiceEquivalent rdf:resource="#awsPersonalHealthDashboard"/>
+  <isServiceEquivalent rdf:resource="#oracleManagementCloud"/>
+  <isServiceEquivalent rdf:resource="#azureMonitor"/>
+  <isServiceEquivalent rdf:resource="#azureOperationsManagementSuiteOms"/>
+  <isServiceEquivalent rdf:resource="#cloudMonitoringNotificationAndAlerts"/>
+</AgnosticCloudService>
+
 <AlertsAndRemediationGuidanceService rdf:about="#awsPersonalHealthDashboard">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9030,6 +9079,26 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/cloud-monitor</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </AlertsAndRemediationGuidanceService>
+
+<AgnosticCloudService rdf:about="#Agnostic_CloudManagementTools">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#CloudManagementTools"/>
+  <isServiceEquivalent rdf:resource="#azureManagementConsole"/>
+  <isServiceEquivalent rdf:resource="#azureCloudShell"/>
+  <isServiceEquivalent rdf:resource="#cloudShell"/>
+  <isServiceEquivalent rdf:resource="#cloudConsole"/>
+  <isServiceEquivalent rdf:resource="#billingApi"/>
+  <isServiceEquivalent rdf:resource="#awsCommandLineInterface"/>
+  <isServiceEquivalent rdf:resource="#cloudApis"/>
+  <isServiceEquivalent rdf:resource="#apiCatalog"/>
+  <isServiceEquivalent rdf:resource="#oraclePublicCloudCli"/>
+  <isServiceEquivalent rdf:resource="#oracleCloudInfrastructureCli"/>
+  <isServiceEquivalent rdf:resource="#awsManagementConsole"/>
+  <isServiceEquivalent rdf:resource="#oracleManagementConsole"/>
+  <isServiceEquivalent rdf:resource="#azureCommandLineInterface"/>
+  <isServiceEquivalent rdf:resource="#alibabaCloudCli"/>
+  <isServiceEquivalent rdf:resource="#azurePowershell"/>
+</AgnosticCloudService>
 
 <CloudManagementTools rdf:about="#awsCommandLineInterface">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9143,6 +9212,13 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </CloudManagementTools>
 
+<AutomatedInfraManagementServices rdf:about="#Agnostic_AutomatedInfraManagementServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsManagedServices"/>
+  <isServiceEquivalent rdf:resource="#oracleManagedCloudServices"/>
+</AutomatedInfraManagementServices>
+
 <VendorSpecificCloudService rdf:about="#awsManagedServices">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#ManagedCloudServices"/>
@@ -9158,6 +9234,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.oracle.com/fr/cloud/managed-cloud.html</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </AutomatedInfraManagementServices>
+
+<AutomatedDisasterRecoveryServices rdf:about="#Agnostic_AutomatedDisasterRecoveryServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsDisasterRecovery"/>
+  <isServiceEquivalent rdf:resource="#azureBackup"/>
+  <isServiceEquivalent rdf:resource="#oracleDatabaseBackup"/>
+  <isServiceEquivalent rdf:resource="#alibabaDisasterRecovery"/>
+  <isServiceEquivalent rdf:resource="#hybridBackupRecovery"/>
+  <isServiceEquivalent rdf:resource="#azureSiteRecovery"/>
+</AutomatedDisasterRecoveryServices>
 
 <AutomatedDisasterRecoveryServices rdf:about="#awsDisasterRecovery">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9207,6 +9294,18 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </AutomatedDisasterRecoveryServices>
 
+<IdentityAccessManagement rdf:about="#Agnostic_IdentityAccessManagement">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#identity"/>
+  <isServiceEquivalent rdf:resource="#awsIdentityAndAccessManagementIam"/>
+  <isServiceEquivalent rdf:resource="#resourceAccessManagement"/>
+  <isServiceEquivalent rdf:resource="#cloudIam"/>
+  <isServiceEquivalent rdf:resource="#identityAccessManagement"/>
+  <isServiceEquivalent rdf:resource="#azureActiveDirectory"/>
+  <isServiceEquivalent rdf:resource="#cloudIdentityAwareProxy"/>
+</IdentityAccessManagement>
+
 <IdentityAccessManagement rdf:about="#awsIdentityAndAccessManagementIam">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9255,6 +9354,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<CloudSecurityAssesmentService rdf:about="#Agnostic_CloudSecurityAssesmentService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#securityAndComplianceCenter"/>
+  <isServiceEquivalent rdf:resource="#configurationAndComplianceService"/>
+  <isServiceEquivalent rdf:resource="#amazonInspector"/>
+  <isServiceEquivalent rdf:resource="#gaurdDuty"/>
+  <isServiceEquivalent rdf:resource="#azureSecurityCenter"/>
+</CloudSecurityAssesmentService>
+
 <CloudSecurityAssesmentService rdf:about="#amazonInspector">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9295,6 +9404,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </CloudSecurityAssesmentService>
 
+<AgnosticCloudService rdf:about="#Agnostic_SecuredSocketLayerSslCertificates">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#SecuredSocketLayerSslCertificates"/>
+  <isServiceEquivalent rdf:resource="#appServiceCertificate"/>
+  <isServiceEquivalent rdf:resource="#awsCertificateManager"/>
+  <isServiceEquivalent rdf:resource="#certificateManager"/>
+  <isServiceEquivalent rdf:resource="#sslCertificates"/>
+</AgnosticCloudService>
+
 <SecuredSocketLayerSslCertificates rdf:about="#awsCertificateManager">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9326,6 +9444,19 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/certificates</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </SecuredSocketLayerSslCertificates>
+
+<AgnosticCloudService rdf:about="#Agnostic_HardwareBasedSecurityModule">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#HardwareBasedSecurityModule"/>
+  <isServiceEquivalent rdf:resource="#cloudKeyManagementService"/>
+  <isServiceEquivalent rdf:resource="#keyProtect"/>
+  <isServiceEquivalent rdf:resource="#awsCloudhsm"/>
+  <isServiceEquivalent rdf:resource="#cloudHsm"/>
+  <isServiceEquivalent rdf:resource="#hyperProtectCryptoServices"/>
+  <isServiceEquivalent rdf:resource="#keyManagementService"/>
+  <isServiceEquivalent rdf:resource="#azureKeyVault"/>
+  <isServiceEquivalent rdf:resource="#awsSecretsManager"/>
+</AgnosticCloudService>
 
 <HardwareBasedSecurityModule rdf:about="#awsCloudhsm">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9391,6 +9522,21 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<DirectoryServices rdf:about="#Agnostic_DirectoryServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureActiveDirectoryMultiFactorAuthentication"/>
+  <isServiceEquivalent rdf:resource="#awsDirectoryService"/>
+  <isServiceEquivalent rdf:resource="#azureActiveDirectoryDomainServices"/>
+  <isServiceEquivalent rdf:resource="#cloudIam"/>
+  <isServiceEquivalent rdf:resource="#securityKeyEnforcement"/>
+  <isServiceEquivalent rdf:resource="#appId"/>
+  <isServiceEquivalent rdf:resource="#azureActiveDirectory"/>
+  <isServiceEquivalent rdf:resource="#cloudIdentityAwareProxy"/>
+  <isServiceEquivalent rdf:resource="#resourceAccessManagement"/>
+  <isServiceEquivalent rdf:resource="#azureActiveDirectoryB2C"/>
+</DirectoryServices>
+
 <DirectoryServices rdf:about="#awsDirectoryService">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9439,6 +9585,19 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<KeyManagementServices rdf:about="#Agnostic_KeyManagementServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudKeyManagementService"/>
+  <isServiceEquivalent rdf:resource="#keyProtect"/>
+  <isServiceEquivalent rdf:resource="#cloudHsm"/>
+  <isServiceEquivalent rdf:resource="#hyperProtectCryptoServices"/>
+  <isServiceEquivalent rdf:resource="#identityCloudService"/>
+  <isServiceEquivalent rdf:resource="#keyManagementService"/>
+  <isServiceEquivalent rdf:resource="#azureKeyVault"/>
+  <isServiceEquivalent rdf:resource="#awsKeyManagementService"/>
+</KeyManagementServices>
+
 <KeyManagementServices rdf:about="#awsKeyManagementService">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9454,6 +9613,15 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </KeyManagementServices>
+
+<AgnosticCloudService rdf:about="#Agnostic_ConsolidatedManagementOfMultipleCloudAccounts">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ConsolidatedManagementOfMultipleCloudAccounts"/>
+  <isServiceEquivalent rdf:resource="#resourceGroup"/>
+  <isServiceEquivalent rdf:resource="#awsOrganizations"/>
+  <isServiceEquivalent rdf:resource="#audit"/>
+  <isServiceEquivalent rdf:resource="#azureManagementGroups"/>
+</AgnosticCloudService>
 
 <ConsolidatedManagementOfMultipleCloudAccounts rdf:about="#awsOrganizations">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9487,6 +9655,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ConsolidatedManagementOfMultipleCloudAccounts>
 
+<DdosProtectionService rdf:about="#Agnostic_DdosProtectionService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#ddosProAndBasic"/>
+  <isServiceEquivalent rdf:resource="#awsShield"/>
+  <isServiceEquivalent rdf:resource="#internetServices"/>
+  <isServiceEquivalent rdf:resource="#azureDdosProtection"/>
+  <isServiceEquivalent rdf:resource="#cloudArmorBeta"/>
+</DdosProtectionService>
+
 <DdosProtectionService rdf:about="#awsShield">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9519,6 +9697,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </DdosProtectionService>
 
+<WebApplicationFirewall rdf:about="#Agnostic_WebApplicationFirewall">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#webApplicationFirewall"/>
+  <isServiceEquivalent rdf:resource="#awsWaf"/>
+  <isServiceEquivalent rdf:resource="#azureWaf"/>
+  <isServiceEquivalent rdf:resource="#internetServices"/>
+</WebApplicationFirewall>
+
 <WebApplicationFirewall rdf:about="#awsWaf">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9542,6 +9729,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/waf</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </WebApplicationFirewall>
+
+<SecurityComplianceService rdf:about="#Agnostic_SecurityComplianceService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#securityAndComplianceCenter"/>
+  <isServiceEquivalent rdf:resource="#awsArtifact"/>
+  <isServiceEquivalent rdf:resource="#compliance"/>
+  <isServiceEquivalent rdf:resource="#cloudSecurityCommandCenterAlpha"/>
+  <isServiceEquivalent rdf:resource="#alibabaTrusterCenter"/>
+  <isServiceEquivalent rdf:resource="#azureSecurityCompliance"/>
+</SecurityComplianceService>
 
 <SecurityComplianceService rdf:about="#awsFirewallManager">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9599,6 +9797,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </SecurityComplianceService>
 
+<AgnosticCloudService rdf:about="#Agnostic_BigDataQueryAsAService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#BigDataQueryAsAService"/>
+  <isServiceEquivalent rdf:resource="#eMapreduceService"/>
+  <isServiceEquivalent rdf:resource="#amazonAthena"/>
+  <isServiceEquivalent rdf:resource="#azureDataLakeAnalytics"/>
+  <isServiceEquivalent rdf:resource="#bigquery"/>
+  <isServiceEquivalent rdf:resource="#sqlQuery"/>
+</AgnosticCloudService>
+
 <BigDataQueryAsAService rdf:about="#amazonAthena">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9630,6 +9838,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/e-mapreduce</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
+
+<AgnosticCloudService rdf:about="#Agnostic_BigDataManagedClusterAsAService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#BigDataManagedClusterAsAService"/>
+  <isServiceEquivalent rdf:resource="#analyticsEngine"/>
+  <isServiceEquivalent rdf:resource="#eMapreduceService"/>
+  <isServiceEquivalent rdf:resource="#bigData"/>
+  <isServiceEquivalent rdf:resource="#amazonEmr"/>
+  <isServiceEquivalent rdf:resource="#azureHdinsight"/>
+  <isServiceEquivalent rdf:resource="#cloudDataproc"/>
+</AgnosticCloudService>
 
 <BigDataManagedClusterAsAService rdf:about="#amazonEmr">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9671,6 +9890,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </BigDataManagedClusterAsAService>
 
+<CloudSearch rdf:about="#Agnostic_CloudSearch">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureSearch"/>
+  <isServiceEquivalent rdf:resource="#amazonCloudsearch"/>
+  <isServiceEquivalent rdf:resource="#databasesForElasticsearch"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticSearchService"/>
+</CloudSearch>
+
 <CloudSearch rdf:about="#amazonCloudsearch">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9702,6 +9930,19 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.ibm.com/catalog/services/databases-for-elasticsearch</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </CloudSearch>
+
+<StreamingService rdf:about="#Agnostic_StreamingService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureStreamAnalytics"/>
+  <isServiceEquivalent rdf:resource="#azureEventHub"/>
+  <isServiceEquivalent rdf:resource="#cloudDataflow"/>
+  <isServiceEquivalent rdf:resource="#amazonKinesis"/>
+  <isServiceEquivalent rdf:resource="#streamingAnalytics"/>
+  <isServiceEquivalent rdf:resource="#eventStreams"/>
+  <isServiceEquivalent rdf:resource="#eventHubApacheKafkaAsAService"/>
+  <isServiceEquivalent rdf:resource="#amazonKinesisVideoStreams"/>
+</StreamingService>
 
 <StreamingService rdf:about="#amazonKinesis">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9767,6 +10008,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </StreamingService>
 
+<AgnosticCloudService rdf:about="#Agnostic_DataWarehouse">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#DataWarehouse"/>
+  <isServiceEquivalent rdf:resource="#amazonRedshift"/>
+  <isServiceEquivalent rdf:resource="#alibabaMaxcomputeOdps"/>
+  <isServiceEquivalent rdf:resource="#azureSqlDataWarehouse"/>
+  <isServiceEquivalent rdf:resource="#bigquery"/>
+  <isServiceEquivalent rdf:resource="#db2Warehouse"/>
+</AgnosticCloudService>
+
 <DataWarehouse rdf:about="#db2Warehouse">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -9774,6 +10025,18 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.ibm.com/docs/services/Db2whc?topic=Db2whc-about</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </DataWarehouse>
+
+<BusinessIntelligenceDataVisualization rdf:about="#Agnostic_BusinessIntelligenceDataVisualization">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#dataIde"/>
+  <isServiceEquivalent rdf:resource="#powerbi"/>
+  <isServiceEquivalent rdf:resource="#googleDataStudioBeta"/>
+  <isServiceEquivalent rdf:resource="#watsonStudio"/>
+  <isServiceEquivalent rdf:resource="#amazonQuicksight"/>
+  <isServiceEquivalent rdf:resource="#dataVisualization"/>
+  <isServiceEquivalent rdf:resource="#businessIntelligence"/>
+</BusinessIntelligenceDataVisualization>
 
 <BusinessIntelligenceDataVisualization rdf:about="#amazonQuicksight">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9830,6 +10093,24 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/ide</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </BusinessIntelligenceDataVisualization>
+
+<AgnosticCloudService rdf:about="#Agnostic_CloudEtl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#CloudEtl"/>
+  <isServiceEquivalent rdf:resource="#dataIntegration"/>
+  <isServiceEquivalent rdf:resource="#logicApps"/>
+  <isServiceEquivalent rdf:resource="#cloudDataprepPrivateBeta"/>
+  <isServiceEquivalent rdf:resource="#cloudComposerBeta"/>
+  <isServiceEquivalent rdf:resource="#datastage"/>
+  <isServiceEquivalent rdf:resource="#awsDataPipeline"/>
+  <isServiceEquivalent rdf:resource="#azureDataFactory"/>
+  <isServiceEquivalent rdf:resource="#watsonKnowledgeCatalog"/>
+  <isServiceEquivalent rdf:resource="#dataIntegrator"/>
+  <isServiceEquivalent rdf:resource="#awsGlue"/>
+  <isServiceEquivalent rdf:resource="#dataworks"/>
+  <isServiceEquivalent rdf:resource="#amazonSimpleWorkflowServiceSwf"/>
+  <isServiceEquivalent rdf:resource="#azureDataCatalog"/>
+</AgnosticCloudService>
 
 <CloudEtl rdf:about="#awsDataPipeline">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -9934,6 +10215,26 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/data-integration</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </CloudEtl>
+
+<LanguageProcessingAi rdf:about="#Agnostic_LanguageProcessingAi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#languageTranslator"/>
+  <isServiceEquivalent rdf:resource="#watsonAssistant"/>
+  <isServiceEquivalent rdf:resource="#amazonLex"/>
+  <isServiceEquivalent rdf:resource="#amazonComprehend"/>
+  <isServiceEquivalent rdf:resource="#watsonDiscovery"/>
+  <isServiceEquivalent rdf:resource="#luisLanguageUnderstandingIntelligentService"/>
+  <isServiceEquivalent rdf:resource="#watsonKnowledgeStudio"/>
+  <isServiceEquivalent rdf:resource="#azureBotService"/>
+  <isServiceEquivalent rdf:resource="#textToSpeech"/>
+  <isServiceEquivalent rdf:resource="#azureSpeechRecognitionApi"/>
+  <isServiceEquivalent rdf:resource="#personalityInsights"/>
+  <isServiceEquivalent rdf:resource="#naturalLanguageApi"/>
+  <isServiceEquivalent rdf:resource="#cloudTextToSpeechBeta"/>
+  <isServiceEquivalent rdf:resource="#dialogflowEnterpriseEditionBeta"/>
+  <isServiceEquivalent rdf:resource="#naturalLanguageClassifier"/>
+</LanguageProcessingAi>
 
 <LanguageProcessingAi rdf:about="#amazonLex">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10055,6 +10356,18 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </LanguageProcessingAi>
 
+<SpeechRecognitionAi rdf:about="#Agnostic_SpeechRecognitionAi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#bingSpeechApi"/>
+  <isServiceEquivalent rdf:resource="#amazonPolly"/>
+  <isServiceEquivalent rdf:resource="#translationApi"/>
+  <isServiceEquivalent rdf:resource="#speechApi"/>
+  <isServiceEquivalent rdf:resource="#speechToText"/>
+  <isServiceEquivalent rdf:resource="#amazonTranscribe"/>
+  <isServiceEquivalent rdf:resource="#amazonTranslate"/>
+</SpeechRecognitionAi>
+
 <SpeechRecognitionAi rdf:about="#amazonPolly">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10110,6 +10423,19 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.ibm.com/docs/services/speech-to-text?topic=speech-to-text-gettingStarted</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </SpeechRecognitionAi>
+
+<AgnosticCloudService rdf:about="#Agnostic_ImageRecognitionAi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ImageRecognitionAi"/>
+  <isServiceEquivalent rdf:resource="#visualRecognition"/>
+  <isServiceEquivalent rdf:resource="#amazonRekognition"/>
+  <isServiceEquivalent rdf:resource="#imageSearch"/>
+  <isServiceEquivalent rdf:resource="#emotionApi"/>
+  <isServiceEquivalent rdf:resource="#faceApi"/>
+  <isServiceEquivalent rdf:resource="#computerVisionApi"/>
+  <isServiceEquivalent rdf:resource="#visionApi"/>
+  <isServiceEquivalent rdf:resource="#cloudVideoIntelligence"/>
+</AgnosticCloudService>
 
 <ImageRecognitionAi rdf:about="#amazonRekognition">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10174,6 +10500,22 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/imagesearch</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ImageRecognitionAi>
+
+<MachineLearning rdf:about="#Agnostic_MachineLearning">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudMachineLearningServices"/>
+  <isServiceEquivalent rdf:resource="#machineLearning"/>
+  <isServiceEquivalent rdf:resource="#watsonOpenscale"/>
+  <isServiceEquivalent rdf:resource="#machineLearningPlatformForAi"/>
+  <isServiceEquivalent rdf:resource="#amazonSageMaker"/>
+  <isServiceEquivalent rdf:resource="#amazonMachineLearning"/>
+  <isServiceEquivalent rdf:resource="#azureMachineLearning"/>
+  <isServiceEquivalent rdf:resource="#azureMachineLearningWorkbench"/>
+  <isServiceEquivalent rdf:resource="#azureMachineLearningModelManagement"/>
+  <isServiceEquivalent rdf:resource="#cloudDatalab"/>
+  <isServiceEquivalent rdf:resource="#cloudAutomlAlpha"/>
+</MachineLearning>
 
 <MachineLearning rdf:about="#amazonMachineLearning">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10263,6 +10605,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </MachineLearning>
 
+<MobileAppDevelopmentServices rdf:about="#Agnostic_MobileAppDevelopmentServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureMobileApps"/>
+  <isServiceEquivalent rdf:resource="#awsMobileHub"/>
+  <isServiceEquivalent rdf:resource="#cloudMobileApp"/>
+  <isServiceEquivalent rdf:resource="#mobileFoundation"/>
+  <isServiceEquivalent rdf:resource="#mobileChatbots"/>
+</MobileAppDevelopmentServices>
+
 <MobileAppDevelopmentServices rdf:about="#awsMobileHub">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10302,6 +10654,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.oracle.com/en_US/mobile/features</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </MobileAppDevelopmentServices>
+
+<WebApiManagementService rdf:about="#Agnostic_WebApiManagementService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#apiPlatform"/>
+  <isServiceEquivalent rdf:resource="#amazonApiGateway"/>
+  <isServiceEquivalent rdf:resource="#apiGateway"/>
+  <isServiceEquivalent rdf:resource="#azureApiManagement"/>
+  <isServiceEquivalent rdf:resource="#cloudEndpoints"/>
+  <isServiceEquivalent rdf:resource="#apiConnect"/>
+</WebApiManagementService>
 
 <VendorSpecificCloudService rdf:about="#amazonApiGateway">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10351,6 +10714,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<AgnosticCloudService rdf:about="#Agnostic_WebMobileAuthenticationServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#WebMobileAuthenticationServices"/>
+  <isServiceEquivalent rdf:resource="#firebaseAuthentication"/>
+  <isServiceEquivalent rdf:resource="#mobileCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonCognito"/>
+  <isServiceEquivalent rdf:resource="#appId"/>
+  <isServiceEquivalent rdf:resource="#azureMobileSdkOfflineSync"/>
+</AgnosticCloudService>
+
 <WebMobileAuthenticationServices rdf:about="#amazonCognito">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10383,6 +10756,14 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </VendorSpecificCloudService>
 
+<ConsolidatedMgmtOfMultipleCloudAccounts rdf:about="#Agnostic_ConsolidatedMgmtOfMultipleCloudAccounts">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonPinpoint"/>
+  <isServiceEquivalent rdf:resource="#azureMobileEngagement"/>
+  <isServiceEquivalent rdf:resource="#mobileFoundation"/>
+</ConsolidatedMgmtOfMultipleCloudAccounts>
+
 <VendorSpecificCloudService rdf:about="#amazonPinpoint">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#MobileAnalytics"/>
@@ -10398,6 +10779,21 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </ConsolidatedMgmtOfMultipleCloudAccounts>
+
+<ManagedCloudServices rdf:about="#Agnostic_ManagedCloudServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsManagedServices"/>
+</ManagedCloudServices>
+
+<MobileAppTestingService rdf:about="#Agnostic_MobileAppTestingService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureDevtestLabsBackEnd"/>
+  <isServiceEquivalent rdf:resource="#cloudTestLab"/>
+  <isServiceEquivalent rdf:resource="#awsDeviceFarm"/>
+  <isServiceEquivalent rdf:resource="#xamarinTestCloudFrontEnd"/>
+</MobileAppTestingService>
 
 <MobileAppTestingService rdf:about="#awsDeviceFarm">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10431,6 +10827,14 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </MobileAppTestingService>
 
+<AgnosticCloudService rdf:about="#Agnostic_MobileAppSoftwareDevelopmentToolkit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#MobileAppSoftwareDevelopmentToolkit"/>
+  <isServiceEquivalent rdf:resource="#azureMobileSdk"/>
+  <isServiceEquivalent rdf:resource="#cloudToolsForAndroidStudio"/>
+  <isServiceEquivalent rdf:resource="#awsMobileSdk"/>
+</AgnosticCloudService>
+
 <MobileAppSoftwareDevelopmentToolkit rdf:about="#awsMobileSdk">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10446,6 +10850,20 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </MobileAppSoftwareDevelopmentToolkit>
+
+<AgnosticCloudService rdf:about="#Agnostic_ApplicationServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ApplicationServices"/>
+  <isServiceEquivalent rdf:resource="#appEngine"/>
+  <isServiceEquivalent rdf:resource="#awsStepFunctions"/>
+  <isServiceEquivalent rdf:resource="#logicApps"/>
+  <isServiceEquivalent rdf:resource="#azureFunctions"/>
+  <isServiceEquivalent rdf:resource="#eventGrid"/>
+  <isServiceEquivalent rdf:resource="#microsoftFlow"/>
+  <isServiceEquivalent rdf:resource="#ibmCloudFunctions"/>
+  <isServiceEquivalent rdf:resource="#azureAppServiceWebjobs"/>
+  <isServiceEquivalent rdf:resource="#functions"/>
+</AgnosticCloudService>
 
 <ApplicationServices rdf:about="#awsStepFunctions">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10487,6 +10905,16 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </ApplicationServices>
 
+<MobileAppAnalytics rdf:about="#Agnostic_MobileAppAnalytics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#mobileCloudService"/>
+  <isServiceEquivalent rdf:resource="#mobileFoundation"/>
+  <isServiceEquivalent rdf:resource="#hockeyApp"/>
+  <isServiceEquivalent rdf:resource="#amazonMobileAnalytics"/>
+  <isServiceEquivalent rdf:resource="#firebaseAnalytics"/>
+</MobileAppAnalytics>
+
 <MobileAppAnalytics rdf:about="#amazonMobileAnalytics">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10510,6 +10938,20 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://firebase.google.com/docs/analytics/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </MobileAppAnalytics>
+
+<AgnosticCloudService rdf:about="#Agnostic_ApiManagementService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#ApiManagementService"/>
+  <isServiceEquivalent rdf:resource="#apigeeSense"/>
+  <isServiceEquivalent rdf:resource="#amazonApiGateway"/>
+  <isServiceEquivalent rdf:resource="#azureApiManagement"/>
+  <isServiceEquivalent rdf:resource="#cloudEndpoints"/>
+  <isServiceEquivalent rdf:resource="#apiConnect"/>
+  <isServiceEquivalent rdf:resource="#apiGateway"/>
+  <isServiceEquivalent rdf:resource="#apigeeApiPlatform"/>
+  <isServiceEquivalent rdf:resource="#apiAnalytics"/>
+  <isServiceEquivalent rdf:resource="#apiMonitization"/>
+</AgnosticCloudService>
 
 <ApiManagementService rdf:about="#apigeeApiPlatform">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10542,6 +10984,25 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cloud.google.com/apigee-sense/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </ApiManagementService>
+
+<MediaTranscoders rdf:about="#Agnostic_MediaTranscoders">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#contentProtection"/>
+  <isServiceEquivalent rdf:resource="#mediaAnalytics"/>
+  <isServiceEquivalent rdf:resource="#digitalTranscoding"/>
+  <isServiceEquivalent rdf:resource="#amazonElasticTranscoder"/>
+  <isServiceEquivalent rdf:resource="#awsElementalMediaconvert"/>
+  <isServiceEquivalent rdf:resource="#apsaravideoLive"/>
+  <isServiceEquivalent rdf:resource="#awsElementalMedialive"/>
+  <isServiceEquivalent rdf:resource="#awsElementalMediapackage"/>
+  <isServiceEquivalent rdf:resource="#liveOnDemandStreaming"/>
+  <isServiceEquivalent rdf:resource="#awsElementalMediastore"/>
+  <isServiceEquivalent rdf:resource="#awsElementalMediatailor"/>
+  <isServiceEquivalent rdf:resource="#azureMediaServices"/>
+  <isServiceEquivalent rdf:resource="#azureMediaPlayer"/>
+  <isServiceEquivalent rdf:resource="#amazonKinesisVideoStreams"/>
+</MediaTranscoders>
 
 <MediaTranscoders rdf:about="#amazonElasticTranscoder">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10647,6 +11108,22 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </MediaTranscoders>
 
+<AgnosticCloudService rdf:about="#Agnostic_QueuingServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#QueuingServices"/>
+  <isServiceEquivalent rdf:resource="#cloudPubSub"/>
+  <isServiceEquivalent rdf:resource="#eventSteams"/>
+  <isServiceEquivalent rdf:resource="#amazonSqs"/>
+  <isServiceEquivalent rdf:resource="#integration"/>
+  <isServiceEquivalent rdf:resource="#messaging"/>
+  <isServiceEquivalent rdf:resource="#messageQueue"/>
+  <isServiceEquivalent rdf:resource="#amazonMq"/>
+  <isServiceEquivalent rdf:resource="#serviceBusQueues"/>
+  <isServiceEquivalent rdf:resource="#queueStorage"/>
+  <isServiceEquivalent rdf:resource="#serviceBusTopics"/>
+  <isServiceEquivalent rdf:resource="#serviceBusRelay"/>
+</AgnosticCloudService>
+
 <QueuingServices rdf:about="#amazonSqs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10735,6 +11212,14 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </QueuingServices>
 
+<MobileAnalytics rdf:about="#Agnostic_MobileAnalytics">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonPinpoint"/>
+  <isServiceEquivalent rdf:resource="#mobileEngagement"/>
+  <isServiceEquivalent rdf:resource="#mobileFoundation"/>
+</MobileAnalytics>
+
 <MobileAnalytics rdf:about="#mobileEngagement">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10742,6 +11227,15 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </MobileAnalytics>
+
+<AgnosticCloudService rdf:about="#Agnostic_EmailServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#EmailServices"/>
+  <isServiceEquivalent rdf:resource="#amazonSes"/>
+  <isServiceEquivalent rdf:resource="#directMail"/>
+  <isServiceEquivalent rdf:resource="#sendgrid"/>
+  <isServiceEquivalent rdf:resource="#emailDelivery"/>
+</AgnosticCloudService>
 
 <EmailServices rdf:about="#amazonSes">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10774,6 +11268,16 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/directmail</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </EmailServices>
+
+<AgnosticCloudService rdf:about="#Agnostic_NotificationServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#NotificationServices"/>
+  <isServiceEquivalent rdf:resource="#pushNotifications"/>
+  <isServiceEquivalent rdf:resource="#shortMessageServiceSms"/>
+  <isServiceEquivalent rdf:resource="#amazonSns"/>
+  <isServiceEquivalent rdf:resource="#azureNotificationServices"/>
+  <isServiceEquivalent rdf:resource="#firebaseCloudMessaging"/>
+</AgnosticCloudService>
 
 <NotificationServices rdf:about="#amazonSns">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10814,6 +11318,19 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/short-message-service</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </NotificationServices>
+
+<BlockchainServices rdf:about="#Agnostic_BlockchainServices">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonQuantumLedgerDatabaseQldb"/>
+  <isServiceEquivalent rdf:resource="#blockchain"/>
+  <isServiceEquivalent rdf:resource="#blockchainWorkbench"/>
+  <isServiceEquivalent rdf:resource="#azureBlockchainTokens"/>
+  <isServiceEquivalent rdf:resource="#blockchainPlatform"/>
+  <isServiceEquivalent rdf:resource="#blockchainComingSoon"/>
+  <isServiceEquivalent rdf:resource="#blockchainAsAService"/>
+  <isServiceEquivalent rdf:resource="#amazonManagedBlockchain"/>
+</BlockchainServices>
 
 <BlockchainServices rdf:about="#amazonManagedBlockchain">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10879,6 +11396,17 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </BlockchainServices>
 
+<Chatbot rdf:about="#Agnostic_Chatbot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#oracleChatbots"/>
+  <isServiceEquivalent rdf:resource="#lexChatbots"/>
+  <isServiceEquivalent rdf:resource="#watsonAssistant"/>
+  <isServiceEquivalent rdf:resource="#dialogflow"/>
+  <isServiceEquivalent rdf:resource="#azureBotService"/>
+  <isServiceEquivalent rdf:resource="#intelligentServiceRobot"/>
+</Chatbot>
+
 <Chatbot rdf:about="#lexChatbots">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10910,6 +11438,16 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/product/bot</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </Chatbot>
+
+<AgnosticCloudService rdf:about="#Agnostic_OfficeDocumentSolutions">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#OfficeDocumentSolutions"/>
+  <isServiceEquivalent rdf:resource="#amazonWorkspaces"/>
+  <isServiceEquivalent rdf:resource="#microsoftOffice365"/>
+  <isServiceEquivalent rdf:resource="#gSuite"/>
+  <isServiceEquivalent rdf:resource="#amazonWorkdocs"/>
+  <isServiceEquivalent rdf:resource="#amazonWorkmail"/>
+</AgnosticCloudService>
 
 <OfficeDocumentSolutions rdf:about="#amazonWorkdocs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -10951,6 +11489,12 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </OfficeDocumentSolutions>
 
+<DesktopApplicationStreaming rdf:about="#Agnostic_DesktopApplicationStreaming">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#amazonAppstream20"/>
+</DesktopApplicationStreaming>
+
 <DesktopApplicationStreaming rdf:about="#amazonAppstream20">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -10958,6 +11502,17 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </DesktopApplicationStreaming>
+
+<CloudMarketplace rdf:about="#Agnostic_CloudMarketplace">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#cloudLauncher"/>
+  <isServiceEquivalent rdf:resource="#ibmMarketplace"/>
+  <isServiceEquivalent rdf:resource="#oracleCloudMarketPlace"/>
+  <isServiceEquivalent rdf:resource="#awsMarketplace"/>
+  <isServiceEquivalent rdf:resource="#alibabaCloudMarketplace"/>
+  <isServiceEquivalent rdf:resource="#azureMarketplace"/>
+</CloudMarketplace>
 
 <CloudMarketplace rdf:about="#awsMarketplace">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -11006,6 +11561,20 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.alibabacloud.com/marketplace</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </CloudMarketplace>
+
+<IotPlatform rdf:about="#Agnostic_IotPlatform">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureIotPlatform"/>
+  <isServiceEquivalent rdf:resource="#azureIotHub"/>
+  <isServiceEquivalent rdf:resource="#cloudIotCoreBeta"/>
+  <isServiceEquivalent rdf:resource="#googleCloudIot"/>
+  <isServiceEquivalent rdf:resource="#internetOfThingsPlatform"/>
+  <isServiceEquivalent rdf:resource="#nodeRed"/>
+  <isServiceEquivalent rdf:resource="#internetOfThingsCloudService"/>
+  <isServiceEquivalent rdf:resource="#iotPlatform"/>
+  <isServiceEquivalent rdf:resource="#awsIotPlatform"/>
+</IotPlatform>
 
 <IotPlatform rdf:about="#awsIotPlatform">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -11079,6 +11648,15 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </IotPlatform>
 
+<IotDevelopmentSolutions rdf:about="#Agnostic_IotDevelopmentSolutions">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#internetOfThingsPlatform"/>
+  <isServiceEquivalent rdf:resource="#azureIotSdk"/>
+  <isServiceEquivalent rdf:resource="#awsGreengrass"/>
+  <isServiceEquivalent rdf:resource="#azureIotEdge"/>
+</IotDevelopmentSolutions>
+
 <IotDevelopmentSolutions rdf:about="#awsGreengrass">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -11103,6 +11681,13 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </IotDevelopmentSolutions>
 
+<AgnosticCloudService rdf:about="#Agnostic_IotHardware">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#IotHardware"/>
+  <isServiceEquivalent rdf:resource="#awsIotButton"/>
+  <isServiceEquivalent rdf:resource="#azureSphere"/>
+</AgnosticCloudService>
+
 <IotHardware rdf:about="#awsIotButton">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -11118,6 +11703,14 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://azure.microsoft.com/en-us/services/azure-sphere/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To be added</ToBeAdded>
 </IotHardware>
+
+<GameDevelopmentService rdf:about="#Agnostic_GameDevelopmentService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#visualStudio"/>
+  <isServiceEquivalent rdf:resource="#watsonUnitySdk"/>
+  <isServiceEquivalent rdf:resource="#amazonLumberyard"/>
+</GameDevelopmentService>
 
 <GameDevelopmentService rdf:about="#amazonLumberyard">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -11143,6 +11736,12 @@
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </GameDevelopmentService>
 
+<RoboticsDevelopmentService rdf:about="#Agnostic_RoboticsDevelopmentService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#awsRobomaker"/>
+</RoboticsDevelopmentService>
+
 <RoboticsDevelopmentService rdf:about="#awsRobomaker">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdf:type rdf:resource="#VendorSpecificCloudService"/>
@@ -11150,6 +11749,13 @@
   <Ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://aws.amazon.com/robomaker/</Ref>
   <ToBeAdded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</ToBeAdded>
 </RoboticsDevelopmentService>
+
+<DevelopmentTestingService rdf:about="#Agnostic_DevelopmentTestingService">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#AgnosticCloudService"/>
+  <isServiceEquivalent rdf:resource="#azureDevTest"/>
+  <isServiceEquivalent rdf:resource="#awsDevTest"/>
+</DevelopmentTestingService>
 
 <DevelopmentTestingService rdf:about="#awsDevTest">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
