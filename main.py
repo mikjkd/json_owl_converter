@@ -42,13 +42,13 @@ if __name__ == "__main__":
             attr = d[PROPERTIES]
             attr.append(onto.offeredBy.exactly(1, onto.CloudProvider))
             nr = type(service, (onto[category],), {ISA: attr})
-            # creazione individuo agnostic
 
         # inserisco individui
         indlist = list(onto.individuals())
 
         for ind in parse_individuals(data):
             sname = ind[SERVICE]
+            # creazione individuo agnostic
             agnostic_ind = onto[service]('Agnostic_' + sname)
             agnostic_ind.is_a = [onto[AGNOSTIC_CS], onto[sname]]
             new_ind_list = []
