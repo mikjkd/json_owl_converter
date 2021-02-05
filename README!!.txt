@@ -17,7 +17,3 @@ Ogni individuo agnostic è equivalent a una lista di  individui vendor specific
 modifica ObjectProperty isServiceEquivalent:
 dominio = AgnosticCloudService
 range = VendorSpecificCloudService
-
-creazione ObjectProperty hasAgnosticEquivalent:
-dominio = VendorSpecificCloudService
-range = AgnosticCloudService
